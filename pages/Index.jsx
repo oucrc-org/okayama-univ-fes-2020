@@ -1,4 +1,4 @@
-import Header from '.././components/header'
+import Header from '.././components/Header'
 import MainVisual from "../components/MainVisual";
 
 export default function Index() {
