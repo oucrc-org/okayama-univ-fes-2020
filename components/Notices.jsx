@@ -1,4 +1,4 @@
-export default function Notice() {
+export default function Notices() {
     return (
         <div>
             <div className="font-bold text-xl m-3">お知らせ</div>

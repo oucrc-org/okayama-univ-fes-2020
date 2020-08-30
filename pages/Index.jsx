@@ -1,6 +1,6 @@
 import Header from '.././components/Header'
 import MainVisual from "../components/MainVisual";
-import Notice from "../components/Notice";
+import Notices from "../components/Notices";
 import Contents from "../components/Contents";
 
 export default function Index({contents}) {
@@ -8,7 +8,7 @@ export default function Index({contents}) {
         <div>
             <Header/>
             <MainVisual/>
-            <Notice/>
+            <Notices/>
             <Contents contents={contents}/>
         </div>
     )
