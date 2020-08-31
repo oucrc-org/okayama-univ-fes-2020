@@ -8,8 +8,10 @@ export default function Index({contents, notices}) {
         <div>
             <Header/>
             <MainVisual/>
-            <Notices notices={notices}/>
-            <Contents contents={contents}/>
+            <div className="max-w-5xl ml-auto mr-auto">
+                <Notices notices={notices}/>
+                <Contents contents={contents}/>
+            </div>
         </div>
     )
 }
