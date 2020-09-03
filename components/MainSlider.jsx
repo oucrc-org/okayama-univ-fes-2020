@@ -16,16 +16,16 @@ export default class SimpleSlider extends Component {
             <div className="relative">
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     <div>
-                        <img className="w-full max-h-screen" src="/1080x720.png" alt="メインビジュアル"/>
+                        <img className="w-full" src="/committee.png" alt="メインビジュアル"/>
                     </div>
                     <div>
-                        <img className="w-full max-h-screen" src="/1080x720.png" alt="メインビジュアル"/>
+                        <img className="w-full" src="/project.png" alt="メインビジュアル"/>
                     </div>
                     <div>
-                        <img className="w-full max-h-screen" src="/1080x720.png" alt="メインビジュアル"/>
+                        <img className="w-full" src="/clubs.png" alt="メインビジュアル"/>
                     </div>
                     <div>
-                        <img className="w-full max-h-screen" src="/1080x720.png" alt="メインビジュアル"/>
+                        <img className="w-full" src="/labs.png" alt="メインビジュアル"/>
                     </div>
                 </Slider>
                 <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none" onClick={() => {
