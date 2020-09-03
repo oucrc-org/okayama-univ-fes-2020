@@ -4,7 +4,6 @@ export default function Content({content}) {
             <img className="mb-1" src="1080x720.png" alt=""/>
             <div className="m-3">
                 <p>{content.title}</p>
-                <p className="text-sm">ジャンル：あ</p>
             </div>
         </li>
     )
