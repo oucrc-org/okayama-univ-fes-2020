@@ -6,12 +6,14 @@ import Contents from "../components/Contents";
 
 export default function Index({contents, notices}) {
     return (
-        <div className="ml-auto mr-auto container">
+        <div>
             <Header/>
             <MainVisual/>
-            <Message/>
-            <Notices notices={notices}/>
-            <Contents contents={contents}/>
+            <div className="max-w-5xl ml-auto mr-auto">
+                <Message/>
+                <Notices notices={notices}/>
+                <Contents contents={contents}/>
+            </div>
         </div>
     )
 }
