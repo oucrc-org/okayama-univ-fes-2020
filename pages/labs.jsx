@@ -1,3 +1,5 @@
+import Layout from "../components/Layout";
+
 export default function Labs() {
     return (
         <Layout>
