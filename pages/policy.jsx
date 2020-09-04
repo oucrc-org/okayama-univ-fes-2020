@@ -1,7 +1,7 @@
 export default function Policy() {
     return (
-        <div>
+        <Layout>
             <p>サイトポリシー</p>
-        </div>
+        </Layout>
     )
 }

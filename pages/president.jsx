@@ -1,7 +1,9 @@
+import Layout from "../components/Layout";
+
 export default function President() {
     return (
-        <div>
+        <Layout>
             <p>学長からのメッセージ</p>
-        </div>
+        </Layout>
     )
 }

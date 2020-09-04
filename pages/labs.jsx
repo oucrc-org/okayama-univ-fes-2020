@@ -1,7 +1,7 @@
 export default function Labs() {
     return (
-        <div>
+        <Layout>
             <p>研究室一覧</p>
-        </div>
+        </Layout>
     )
 }

@@ -1,7 +1,9 @@
+import Layout from "../components/Layout";
+
 export default function Clubs() {
     return (
-        <div>
+        <Layout>
             <p>部活動・サークル紹介</p>
-        </div>
+        </Layout>
     )
 }
