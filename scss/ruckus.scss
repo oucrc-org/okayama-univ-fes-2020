@@ -1,6 +1,53 @@
 body {
   font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   letter-spacing: 0.07em;
+  font-size: 20px;
+}
+
+header{
+  height:80px;
+
+  a{
+    width: 70%;
+    font-size: 1.3rem;
+  }
+}
+
+.visual{
+  height:100vh;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+  
+  .visual-inner{
+    position: absolute;
+    top:-80px;  
+    height: 100%;
+    width: 100%;
+  img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+  }
+  
+  .held{
+    position:absolute;
+    bottom:0;
+    color: white;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .vertical-line{
+    height: 90px;
+    border: solid 1px white;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  }
+
+
 }
 
 footer {
