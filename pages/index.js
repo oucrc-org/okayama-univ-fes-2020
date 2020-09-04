@@ -9,7 +9,7 @@ export default function Index({contents, notices}) {
         <div>
             <Layout>
                 <MainVisual/>
-                <div className="max-w-5xl ml-auto mr-auto">
+                <div className="max-w-screen-md m-auto container">
                     <Message/>
                     <Notices notices={notices}/>
                     <Contents contents={contents}/>

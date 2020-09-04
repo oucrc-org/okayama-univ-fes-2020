@@ -5,9 +5,16 @@
 html{
     font-size:14px;
 }
-
 footer{
     background-color: #282828;
+}
+.panel{
+    background-color: rgba(0,0,0,0.9);
+    z-index: 99;
+}
+
+.top-header{
+    top: 1rem;
 }
 .btn-blue {
     @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
