@@ -1,21 +1,20 @@
-import Header from '.././components/Header'
 import MainVisual from "../components/MainVisual";
 import Message from "../components/Message";
 import Notices from "../components/Notices";
 import Contents from "../components/Contents";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 export default function Index({contents, notices}) {
     return (
         <div>
-            <Header/>
-            <MainVisual/>
-            <div className="max-w-5xl ml-auto mr-auto">
-                <Message/>
-                <Notices notices={notices}/>
-                <Contents contents={contents}/>
-            </div>
-            <Footer/>
+            <Layout>
+                <MainVisual/>
+                <div className="max-w-5xl ml-auto mr-auto">
+                    <Message/>
+                    <Notices notices={notices}/>
+                    <Contents contents={contents}/>
+                </div>
+            </Layout>
         </div>
     )
 }
