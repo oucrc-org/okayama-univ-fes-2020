@@ -4,15 +4,15 @@ import Notices from "../components/Notices";
 import Contents from "../components/Contents";
 import Layout from "../components/Layout";
 
-export default function Index({ contents, notices }) {
+export default function Index({contents, notices}) {
     return (
         <div>
             <Layout>
-                <MainVisual />
+                <MainVisual/>
                 <div className="max-w-5xl ml-auto mr-auto">
-                    <Message />
-                    <Notices notices={notices} />
-                    <Contents contents={contents} />
+                    <Message/>
+                    <Notices notices={notices}/>
+                    <Contents contents={contents}/>
                 </div>
             </Layout>
         </div>
