@@ -6,19 +6,19 @@ export default class SimpleSlider extends Component {
     render() {
         const contents = [
             {
-                image: "/committee.png",
+                image: "/committee.jpg",
                 link: "/committee"
             },
             {
-                image: "/projects.png",
+                image: "/projects.jpg",
                 link: "/projects"
             },
             {
-                image: "/clubs.png",
+                image: "/clubs.jpg",
                 link: "/clubs"
             },
             {
-                image: "/labs.png",
+                image: "/clubs.jpg",
                 link: "/labs"
             }
         ];
