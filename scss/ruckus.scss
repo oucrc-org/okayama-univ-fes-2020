@@ -1,0 +1,25 @@
+body {
+  font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  letter-spacing: 0.07em;
+}
+
+footer {
+  background:#282828;
+  height:210px;
+  text-align: center;
+  color: white;
+  padding:50px;
+  margin-top: 50px;
+  
+  ul{
+    list-style-type: none;
+    margin:30px 0px !important;
+    li{
+      display: inline;
+      padding: 30px;
+    }
+  }
+  svg{
+    display: inline;
+  }
+}
