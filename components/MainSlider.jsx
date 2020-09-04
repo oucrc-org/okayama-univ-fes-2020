@@ -1,8 +1,28 @@
 import Slider from "react-slick";
 import React, {Component} from "react";
+import Link from "next/link";
 
 export default class SimpleSlider extends Component {
     render() {
+        const contents = [
+            {
+                image: "/committee.png",
+                link: "/committee"
+            },
+            {
+                image: "/projects.png",
+                link: "/projects"
+            },
+            {
+                image: "/clubs.png",
+                link: "/clubs"
+            },
+            {
+                image: "/labs.png",
+                link: "/labs"
+            }
+        ];
+
         const settings = {
             dots: true,
             infinite: true,
@@ -15,26 +35,27 @@ export default class SimpleSlider extends Component {
         return (
             <div className="relative">
                 <Slider ref={c => (this.slider = c)} {...settings}>
-                    <div>
-                        <img className="w-full" src="/committee.png" alt="メインビジュアル"/>
-                    </div>
-                    <div>
-                        <img className="w-full" src="/project.png" alt="メインビジュアル"/>
-                    </div>
-                    <div>
-                        <img className="w-full" src="/clubs.png" alt="メインビジュアル"/>
-                    </div>
-                    <div>
-                        <img className="w-full" src="/labs.png" alt="メインビジュアル"/>
-                    </div>
+                    {
+                        contents.map((content) =>
+                            <div>
+                                <Link href={content.link}>
+                                    <a>
+                                        <img className="w-full" src={content.image} alt="メインビジュアル"/>
+                                    </a>
+                                </Link>
+                            </div>
+                        )
+                    }
                 </Slider>
-                <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none" onClick={() => {
-                    this.slider.slickPrev()
-                }}>◀︎
+                <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none"
+                        onClick={() => {
+                            this.slider.slickPrev()
+                        }}>◀︎
                 </button>
-                <button className="absolute right-0 top-0 bottom-0 m-auto pr-3 xl:w-40 focus:outline-none" onClick={() => {
-                    this.slider.slickNext()
-                }}>▶︎
+                <button className="absolute right-0 top-0 bottom-0 m-auto pr-3 xl:w-40 focus:outline-none"
+                        onClick={() => {
+                            this.slider.slickNext()
+                        }}>▶︎
                 </button>
             </div>
         );
