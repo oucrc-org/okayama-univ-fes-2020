@@ -33,14 +33,14 @@ export default class SimpleSlider extends Component {
             slidesToScroll: 1
         };
         return (
-            <div className="relative">
+            <div className="relative mb-6">
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     {
                         contents.map((content) =>
                             <div>
                                 <Link href={content.link}>
                                     <a>
-                                        <img className="w-full" src={content.image} alt="メインビジュアル"/>
+                                        <img className="w-full max-h-screen object-cover" src={content.image} alt="メインビジュアル"/>
                                     </a>
                                 </Link>
                             </div>
