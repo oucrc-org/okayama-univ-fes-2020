@@ -1,27 +1,13 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { config, library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-
-config.autoAddCss = false;
-library.add(fas, fab);
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between px-4 py-3 sticky top-0 z-50">
-            <div>
+        <nav className="flex items-center justify-between flex-wrap bg-blue-400 p-5 sticky top-0 shadow z-10">
+            <div className="flex items-center flex-shrink-0 text-white mr-6">
                 <Link href="/">
-                    <a>
-                        岡山大学津島祭
-                    </a>
+                    <a><span className="font-semibold text-xl tracking-tight">ここにタイトルが入ります</span></a>
                 </Link>
             </div>
-            <div>
-                <button type="button" className="block">
-                    <FontAwesomeIcon icon={['fas', 'bars']} width="30" />
-                </button>
-            </div>
-        </header>
+        </nav>
     )
 }
