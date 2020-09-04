@@ -5,9 +5,11 @@ import {Component} from "react";
 export default class Layout extends Component {
     render() {
         return (
-            <div>
+            <div className="flex flex-col min-h-screen">
                 <Header/>
-                {this.props.children}
+                <div className="flex-grow">
+                    {this.props.children}
+                </div>
                 <Footer/>
             </div>
         )

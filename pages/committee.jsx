@@ -1,7 +1,9 @@
+import Layout from "../components/Layout";
+
 export default function Committee() {
     return (
-        <div>
+        <Layout>
             <p>実行委員会からのメッセージ</p>
-        </div>
+        </Layout>
     )
 }
