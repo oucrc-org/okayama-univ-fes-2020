@@ -3,7 +3,6 @@ import MainVisual from "../components/MainVisual";
 import Message from "../components/Message";
 import Notices from "../components/Notices";
 import Contents from "../components/Contents";
-import Link from "next/link";
 import Footer from "../components/Footer";
 
 export default function Index({contents, notices}) {
