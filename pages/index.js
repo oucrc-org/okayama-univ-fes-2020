@@ -3,6 +3,7 @@ import Message from "../components/Message";
 import Notices from "../components/Notices";
 import Contents from "../components/Contents";
 import Layout from "../components/Layout";
+import {getNotices} from "../lib/notices"
 
 export default function Index({contents, notices}) {
     return (
@@ -41,16 +42,7 @@ export async function getStaticProps() {
                     "title": "〇〇部の動画"
                 }
             ],
-            notices: [
-                {
-                    "id": 1,
-                    "title": "1つ目のお知らせです"
-                },
-                {
-                    "id": 2,
-                    "title": "2つ目のお知らせです"
-                },
-            ]
+            notices: getNotices()
         }
     }
 }
