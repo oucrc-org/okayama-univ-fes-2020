@@ -1,10 +1,11 @@
 import Notice from "./Notice";
+import Heading from "./common/Heading";
 
 export default function Notices({notices}) {
     return (
-        <div>
-            <div className="font-bold text-xl m-3">お知らせ</div>
-            <div className="rounded shadow-md m-3 p-3 border-2">
+        <div className="mb-6">
+            <Heading text={"お知らせ"}/>
+            <div className="rounded shadow-md p-3 border-2">
                 <ul>
                     {notices.map((notice) => (
                         <Notice key={notice.id} notice={notice}/>
