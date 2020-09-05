@@ -6,7 +6,7 @@ export default class SimpleSlider extends Component {
     render() {
         const contents = [
             {
-                title: "実行委員会からのメッセージ",
+                title: "実行委員会",
                 image: "/committee.jpg",
                 link: "/committee"
             },
@@ -47,7 +47,7 @@ export default class SimpleSlider extends Component {
                                         <img className="w-full max-h-screen object-cover" src={content.image}
                                              alt="メインビジュアル"/>
                                         <div className="absolute top-0 right-0 m-6 opacity-80 bg-blue-900 rounded">
-                                            <p className="text-white text-xl font-bold p-3">
+                                            <p className="text-white text-sm md:text-xl font-bold p-3">
                                                 {content.title}
                                             </p>
                                         </div>
