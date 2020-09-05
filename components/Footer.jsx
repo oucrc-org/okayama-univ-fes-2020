@@ -16,13 +16,9 @@ export default function Footer() {
         <footer className="text-center text-white p-16 bg-blue-900">
             <div className="flex">
                 <div className="flex-1">
-                    <FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="m-auto" />
-                </div>
-                <div className="flex-1">
-                    <FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="m-auto" />
-                </div>
-                <div className="flex-1">
-                    <FontAwesomeIcon icon={['fab', 'youtube']} width="30" className="m-auto" />
+                    <FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="inline" />
+                    <FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="inline mx-12" />
+                    <FontAwesomeIcon icon={['fab', 'youtube']} width="30" className="inline" />
                 </div>
             </div>
             <div className="p-4">
