@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'
-import {getClubs} from "../../lib/clubs";
+import {getClubIds, getClub} from "../../lib/clubs";
 
 export default function Club({club}) {
     return (
@@ -11,13 +11,7 @@ export default function Club({club}) {
 }
 
 export async function getStaticPaths() {
-    const paths = getClubs().map(it => {
-        return {
-            params: {
-                id: it.title
-            }
-        }
-    });
+    const paths = getClubIds();
     return {
         paths,
         fallback: false
@@ -25,13 +19,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const club = getClubs().find(it => it.title === params.id);
+    const club = getClub(params.id);
     return {
         props: {
-            club: {
-                id: club.title,
-                ...club
-            }
+            club: club
         }
     }
 }
