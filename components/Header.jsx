@@ -20,11 +20,11 @@ export default class Header extends Component {
     render() {
         return (
             <header
-                className="sticky top-0 z-10">
+                className="sticky z-50 top-0">
                 <div className="flex items-center justify-between flex-wrap p-2 h-16 xl:h-20 bg-blue-900 text-white">
                     <Link href="/">
                         <a>
-                            <img className="object-contain w-8 mr-2" src="symbol.png" alt="校章"/>
+                            <img className="object-contain w-8 mr-2" src="/symbol.png" alt="校章"/>
                         </a>
                     </Link>
                     <p className="font-serif flex-grow">大学祭</p>

@@ -1,21 +1,7 @@
 import Content from "./Content";
 import Link from "next/link";
 
-export default function Contents({contents}) {
-
-    //固定コンテンツ
-    const fixedContents = [
-        {
-            "id": 1,
-            "title": "学長からのメッセージ",
-            "link": "/president"
-        },
-        {
-            "id": 2,
-            "title": "実行委員長からのメッセージ",
-            "link": "/committee"
-        }
-    ];
+export default function Contents({fixedContents,contents}) {
 
     return (
         <div>
