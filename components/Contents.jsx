@@ -1,21 +1,16 @@
 import Content from "./Content";
 import Link from "next/link";
 
-export default function Contents({fixedContents,contents}) {
+export default function Contents({fixedContents}) {
 
     return (
-        <div>
-            <div className="text-xl font-bold m-3">コンテンツ</div>
+        <div className="mb-6">
+            <div className="text-xl font-bold mt-3 text-blue-700">メッセージ</div>
             <ul className="grid sm:grid-cols-2">
                 {fixedContents.map((content) => (
                     <Link href={content.link}>
                         <a><Content key={content.id} content={content}/></a>
                     </Link>
-                ))}
-            </ul>
-            <ul className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                {contents.map((content) => (
-                    <Content key={content.id} content={content}/>
                 ))}
             </ul>
         </div>
