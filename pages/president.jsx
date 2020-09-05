@@ -1,6 +1,4 @@
 import Layout from "../components/Layout";
-import Link from "next/link";
-import Content from "../components/Content";
 
 export default function President() {
 
@@ -21,7 +19,7 @@ export default function President() {
                         </div>
                     </div>
                     <div className="p-6">
-                        <h2 className="text-blue-700 text-xl font-bold mb-3">岡山大学について</h2>
+                        <h2 className="text-blue-600 text-xl font-bold mb-3">岡山大学について</h2>
                         <p className="mb-6">岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について
                             岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について
                             岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について</p>
