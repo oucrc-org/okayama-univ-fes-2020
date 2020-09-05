@@ -6,6 +6,7 @@ import React, {Component} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {config, library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
+import {getNavigations} from "../lib/navigations";
 
 config.autoAddCss = false;
 library.add(fas);
@@ -49,47 +50,16 @@ export default class Header extends Component {
                         })
                     }}>
                     <div className="text-left w-2/3 ml-auto mr-auto h-full">
-                        <ul className="flex flex-col justify-center h-screen">
-                            <li className="p-4 text-xl">
-                                <Link href="/index">
-                                    <a>トップページ</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/president">
-                                    <a>学長からのメッセージ</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/committee">
-                                    <a>学祭実行委員会について</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/projects">
-                                    <a>団体企画</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/clubs">
-                                    <a>部活動・サークル紹介</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/labs">
-                                    <a>研究室紹介</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/sponsors">
-                                    <a>協賛企業</a>
-                                </Link>
-                            </li>
-                            <li className="p-4 text-xl">
-                                <Link href="/policy">
-                                    <a>サイトポリシー</a>
-                                </Link>
-                            </li>
+                        <ul className="flex flex-col justify-center h-full">
+                            {
+                                getNavigations().map((nav) =>
+                                    <li key={nav.id} className="p-4 text-xl">
+                                        <Link href={nav.link}>
+                                            <a>{nav.title}</a>
+                                        </Link>
+                                    </li>
+                                )
+                            }
                         </ul>
                     </div>
                 </div>
