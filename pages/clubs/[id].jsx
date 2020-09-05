@@ -1,4 +1,4 @@
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import {getClubIds, getClub} from "../../lib/clubs";
 
 export default function Club({club}) {
