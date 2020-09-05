@@ -76,6 +76,11 @@ export default class Header extends Component {
                                 </Link>
                             </li>
                             <li className="p-4 text-xl">
+                                <Link href="/labs">
+                                    <a>研究室紹介</a>
+                                </Link>
+                            </li>
+                            <li className="p-4 text-xl">
                                 <Link href="/sponsors">
                                     <a>協賛企業</a>
                                 </Link>
