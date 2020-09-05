@@ -13,7 +13,7 @@ export default function Index({fixedContents, pickupProject, notices}) {
         <div>
             <Layout>
                 <MainVisual/>
-                <div className="max-w-screen-md p-6 container">
+                <div className="max-w-screen-md p-6 container ml-auto mr-auto">
                     <Message/>
                     <Notices notices={notices}/>
                     <Contents fixedContents={fixedContents}/>
