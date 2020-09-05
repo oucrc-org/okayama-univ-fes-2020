@@ -14,19 +14,17 @@ export default function Clubs() {
                             <h1 className="text-xl text-white mt-3 mb-3">部活動・サークル紹介</h1>
                         </div>
                     </div>
-                    <div className="p-6">
-                        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-                            {getClubs().map((club) =>
-                                <Link href={`/clubs/${club.title}`}>
-                                    <a>
-                                        <li>
-                                            <Content content={club}/>
-                                        </li>
-                                    </a>
-                                </Link>
-                            )}
-                        </ul>
-                    </div>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                        {getClubs().map((club) =>
+                            <Link href={`/clubs/${club.title}`}>
+                                <a>
+                                    <li>
+                                        <Content content={club}/>
+                                    </li>
+                                </a>
+                            </Link>
+                        )}
+                    </ul>
                 </div>
             </div>
         </Layout>
