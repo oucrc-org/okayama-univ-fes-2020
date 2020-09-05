@@ -13,7 +13,7 @@ library.add(fas, fab);
 
 export default function Footer() {
     return (
-        <footer className="text-center text-white p-16">
+        <footer className="text-center text-white p-16 bg-blue-900">
             <div className="flex">
                 <div className="flex-1">
                     <FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="m-auto" />
