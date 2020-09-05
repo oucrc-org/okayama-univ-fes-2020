@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {config, library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {getNavigations} from "../lib/navigations";
+import Transition from "react-transition-group/cjs/Transition";
 
 config.autoAddCss = false;
 library.add(fas);
@@ -41,29 +42,36 @@ export default class Header extends Component {
                         <FontAwesomeIcon icon={['fas', 'bars']} width="40" className="p-3"/>
                     </button>
                 </div>
-                {this.state.isShowMenu &&
-                <div
-                    className="z-50 w-full h-full fixed text-white bg-black opacity-90 overflow-y-auto p-3 top-0"
-                    onClick={() => {
-                        this.setState({
-                            isShowMenu: false
-                        })
-                    }}>
-                    <div className="text-left w-2/3 ml-auto mr-auto h-full">
-                        <ul className="flex flex-col justify-center h-full">
-                            {
-                                getNavigations().map((nav) =>
-                                    <li key={nav.id} className="p-4 text-xl">
-                                        <Link href={nav.link}>
-                                            <a>{nav.title}</a>
-                                        </Link>
-                                    </li>
-                                )
-                            }
-                        </ul>
-                    </div>
-                </div>
-                }
+                <Transition
+                    in={this.state.isShowMenu}
+                    timeout={200}>
+                    {
+                        status => {
+                            console.log(status);
+                            return (
+                                <div
+                                    className={['z-50', 'w-full', 'h-full', 'fixed', 'text-white', 'bg-black', 'overflow-y-auto', 'p-3', 'top-0', `fade-${status}`].join(' ')}
+                                    onClick={() => {
+                                        this.setState({
+                                            isShowMenu: false
+                                        })
+                                    }}>
+                                    <ul className="flex flex-col justify-center ml-auto mr-auto text-left w-2/3 h-full">
+                                        {
+                                            getNavigations().map((nav) =>
+                                                <li key={nav.id} className="p-4 text-xl">
+                                                    <Link href={nav.link}>
+                                                        <a>{nav.title}</a>
+                                                    </Link>
+                                                </li>
+                                            )
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        }
+                    }
+                </Transition>
             </header>
         )
     }
