@@ -46,21 +46,25 @@ export default class Header extends Component {
                     </button>
                 </div>
                 {this.state.isShowMenu &&
-                <div className="z-50 w-full h-full fixed text-white panel overflow-y-auto pt-3">
+                <div className="z-50 w-full h-full fixed text-white panel overflow-y-auto pt-3" onClick={() => {
+                    this.setState({
+                        isShowMenu: false
+                    })
+                }}>
                     <div className="text-center w-2/3 m-auto">
                         <ul>
                             <li className="p-4">
                                 <Link href="/">
-                                    <a>HOME</a>
+                                    <a>トップページ</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="president/">
+                                <Link href="/president">
                                     <a>学長からのメッセージ</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="committee/">
+                                <Link href="/committee">
                                     <a>学祭実行委員会について</a>
                                 </Link>
                             </li>
