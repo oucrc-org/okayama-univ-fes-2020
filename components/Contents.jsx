@@ -1,11 +1,12 @@
 import Content from "./Content";
 import Link from "next/link";
+import Heading from "./common/Heading";
 
 export default function Contents({fixedContents}) {
 
     return (
         <div className="mb-6">
-            <div className="text-xl font-bold mt-3 text-blue-700">メッセージ</div>
+            <Heading text={"メッセージ"}/>
             <ul className="grid sm:grid-cols-2">
                 {fixedContents.map((content) => (
                     <Link href={content.link}>

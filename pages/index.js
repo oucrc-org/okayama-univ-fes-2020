@@ -2,11 +2,11 @@ import MainVisual from "../components/MainVisual";
 import Message from "../components/Message";
 import Notices from "../components/Notices";
 import Contents from "../components/Contents";
-import Project from "../components/Project";
 import Layout from "../components/Layout";
 import {getNotices} from "../lib/notices";
 import {getFixedContents} from "../lib/contents";
 import {getPickUpProject} from "../lib/projects";
+import Heading from "../components/common/Heading";
 
 export default function Index({fixedContents, pickupProject, notices}) {
     return (
@@ -17,7 +17,7 @@ export default function Index({fixedContents, pickupProject, notices}) {
                     <Message/>
                     <Notices notices={notices}/>
                     <Contents fixedContents={fixedContents}/>
-                    <p className="text-xl text-blue-700 font-bold mb-3">ピックアップ団体企画</p>
+                    <Heading text={"ピックアップ団体企画"}/>
                     <iframe className="mb-6" width="100%" height="360px"
                             src={pickupProject.movie} frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
