@@ -24,8 +24,18 @@
 
 html{
     font-size:14px;
+    letter-spacing: 0.06em;
 }
 
-.top-header{
-    top: 1rem;
+@media screen and (max-width: 48rem) {
+    .slick-list, .slick-track {
+        height: 500px;
+    }
+    .slick-slide > div{
+        height: 100%;
+    }
+    .slick-slide img{
+        height: 100% !important;
+        width: 100% !important;
+    }
 }
