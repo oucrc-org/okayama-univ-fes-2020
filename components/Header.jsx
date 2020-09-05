@@ -85,6 +85,11 @@ export default class Header extends Component {
                                     <a>協賛企業</a>
                                 </Link>
                             </li>
+                            <li className="p-4 text-xl">
+                                <Link href="/policy">
+                                    <a>サイトポリシー</a>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

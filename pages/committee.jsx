@@ -11,7 +11,7 @@ export default function Committee() {
                     <div className="relative mb-6">
                         <div className="z-10 absolute w-3/4 bg-green-600 h-full"/>
                         <div className="z-20 relative content-center p-6 ml-auto mr-auto">
-                            <h1 className="text-xl text-white mb-12 mt-12 font-serif">実行委員会からのメッセージ</h1>
+                            <h1 className="text-xl text-white mb-12 mt-12 font-serif">学祭実行委員会からのメッセージ</h1>
                             <iframe className="mb-12" width="100%" height="360px"
                                     src="https://www.youtube.com/embed/Nq0NPnIjbnY" frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
