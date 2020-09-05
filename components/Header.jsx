@@ -37,44 +37,45 @@ export default class Header extends Component {
                             isShowMenu: !this.state.isShowMenu
                         })
                     }}>
-                        {
-                            this.state.isShowMenu
-                                ? <FontAwesomeIcon icon={['fas', 'times']} width="40" className="p-3"/>
-                                : <FontAwesomeIcon icon={['fas', 'bars']} width="40" className="p-3"/>
-                        }
-
+                        <FontAwesomeIcon icon={['fas', 'bars']} width="40" className="p-3"/>
                     </button>
                 </div>
                 {this.state.isShowMenu &&
-                <div className="z-50 w-full h-full fixed text-white panel overflow-y-auto pt-3">
-                    <div className="text-center w-2/3 m-auto">
-                        <ul>
-                            <li className="p-4">
-                                <Link href="/">
-                                    <a>HOME</a>
+                <div
+                    className="z-50 w-full h-full fixed text-white bg-black opacity-90 overflow-y-auto p-3 top-0"
+                    onClick={() => {
+                        this.setState({
+                            isShowMenu: false
+                        })
+                    }}>
+                    <div className="text-left w-2/3 ml-auto mr-auto h-full">
+                        <ul className="flex flex-col justify-center h-screen">
+                            <li className="p-4 text-xl">
+                                <Link href="/index">
+                                    <a>トップページ</a>
                                 </Link>
                             </li>
-                            <li className="p-4">
-                                <Link href="president/">
+                            <li className="p-4 text-xl">
+                                <Link href="/president">
                                     <a>学長からのメッセージ</a>
                                 </Link>
                             </li>
-                            <li className="p-4">
-                                <Link href="committee/">
+                            <li className="p-4 text-xl">
+                                <Link href="/committee">
                                     <a>学祭実行委員会について</a>
                                 </Link>
                             </li>
-                            <li className="p-4">
+                            <li className="p-4 text-xl">
                                 <Link href="/projects">
                                     <a>団体企画</a>
                                 </Link>
                             </li>
-                            <li className="p-4">
+                            <li className="p-4 text-xl">
                                 <Link href="/clubs">
                                     <a>部活動・サークル紹介</a>
                                 </Link>
                             </li>
-                            <li className="p-4">
+                            <li className="p-4 text-xl">
                                 <Link href="/sponsors">
                                     <a>協賛企業</a>
                                 </Link>

@@ -8,10 +8,6 @@ html{
 footer{
     background-color: #282828;
 }
-.panel{
-    background-color: rgba(0,0,0,0.9);
-    z-index: 99;
-}
 
 .top-header{
     top: 1rem;
