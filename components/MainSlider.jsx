@@ -6,19 +6,23 @@ export default class SimpleSlider extends Component {
     render() {
         const contents = [
             {
+                title: "実行委員会からのメッセージ",
                 image: "/committee.jpg",
                 link: "/committee"
             },
             {
+                title: "団体企画",
                 image: "/projects.jpg",
                 link: "/projects"
             },
             {
+                title: "部活動、サークル紹介",
                 image: "/clubs.jpg",
                 link: "/clubs"
             },
             {
-                image: "/clubs.jpg",
+                title: "研究室紹介",
+                image: "/president.jpg",
                 link: "/labs"
             }
         ];
@@ -37,13 +41,19 @@ export default class SimpleSlider extends Component {
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     {
                         contents.map((content) =>
-                            <div>
-                                <Link href={content.link}>
-                                    <a>
-                                        <img className="w-full max-h-screen object-cover" src={content.image} alt="メインビジュアル"/>
-                                    </a>
-                                </Link>
-                            </div>
+                            <Link href={content.link}>
+                                <a>
+                                    <div className="relative">
+                                        <img className="w-full max-h-screen object-cover" src={content.image}
+                                             alt="メインビジュアル"/>
+                                        <div className="absolute top-0 right-0 m-6 opacity-80 bg-blue-900 rounded">
+                                            <p className="text-white text-xl font-bold p-3">
+                                                {content.title}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
                         )
                     }
                 </Slider>
