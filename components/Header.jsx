@@ -27,7 +27,11 @@ export default class Header extends Component {
                             <img className="object-contain w-8 mr-2" src="/symbol.png" alt="校章"/>
                         </a>
                     </Link>
-                    <p className="font-serif flex-grow">大学祭</p>
+                    <Link href="/">
+                        <a className="flex-grow">
+                            <p className="font-serif ">大学祭</p>
+                        </a>
+                    </Link>
                     <button className="focus:outline-none" onClick={() => {
                         this.setState({
                             isShowMenu: !this.state.isShowMenu
@@ -51,27 +55,27 @@ export default class Header extends Component {
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="/">
+                                <Link href="president/">
                                     <a>学長からのメッセージ</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="/">
+                                <Link href="committee/">
                                     <a>学祭実行委員会について</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="/">
+                                <Link href="/projects">
                                     <a>団体企画</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="/">
+                                <Link href="/clubs">
                                     <a>部活動・サークル紹介</a>
                                 </Link>
                             </li>
                             <li className="p-4">
-                                <Link href="/">
+                                <Link href="/sponsors">
                                     <a>協賛企業</a>
                                 </Link>
                             </li>
