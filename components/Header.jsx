@@ -47,7 +47,6 @@ export default class Header extends Component {
                     timeout={200}>
                     {
                         status => {
-                            console.log(status);
                             return (
                                 <div
                                     className={['z-50', 'w-full', 'h-full', 'fixed', 'text-white', 'bg-black', 'overflow-y-auto', 'p-3', 'top-0', `fade-${status}`].join(' ')}
