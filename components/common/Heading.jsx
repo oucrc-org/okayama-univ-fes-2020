@@ -1,5 +1,10 @@
 export default function Heading({text}) {
     return (
-        <h1 className="text-xl text-blue-700 font-bold mb-3 font-serif">{text}</h1>
+        <div className="relative mb-6">
+            <div className="absolute w-3/4 bg-blue-600 h-full"/>
+            <div className="z-10 relative content-center pl-6 pt-3 pb-3 ml-auto mr-auto">
+                <h1 className="text-xl text-white font-serif">{text}</h1>
+            </div>
+        </div>
     )
 }

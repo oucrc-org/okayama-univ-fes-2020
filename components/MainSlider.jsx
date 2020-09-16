@@ -37,14 +37,14 @@ export default class SimpleSlider extends Component {
             slidesToScroll: 1
         };
         return (
-            <div className="relative mb-6">
+            <div className="mb-12 relative">
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     {
                         contents.map((content) =>
                             <Link href={content.link}>
                                 <a>
-                                    <div className="relative">
-                                        <img className="w-full max-h-screen object-cover" src={content.image}
+                                    <div className="relative h-full">
+                                        <img className="h-full object-cover" src={content.image}
                                              alt="メインビジュアル"/>
                                         <div className="absolute top-0 right-0 m-6 opacity-80 bg-blue-900 rounded">
                                             <p className="text-white text-sm md:text-xl font-bold p-3">
@@ -57,6 +57,10 @@ export default class SimpleSlider extends Component {
                         )
                     }
                 </Slider>
+                <div className={"absolute text-white z-30 top-0 inset-x-0 text-center text-3xl font-bold"}>
+                    <div className={"h-12 border-solid border-white border w-px m-auto"}></div>
+                    <p className={"text-shadow-md"}>2020/10/31 - 11/01</p>
+                </div>
                 <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none"
                         onClick={() => {
                             this.slider.slickPrev()
