@@ -19,8 +19,12 @@ jobs:
         run: cd okayama-univ-fes
       - name: set remote
         run: git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
+      - name: fetch
+        run: git fetch upstream
+      - name: checkout
+        run: git checkout master
       - name: merge
-        run: git pull upstream master
+        run: git merge upstream/master
       - name: push
         run: git push origin master
 
