@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: clone
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
+      - name: cd
+        run: cd okayama-univ-fes
+      - name: set remote
+        run: git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
+      - name: merge
+        run: git pull upstream master
+      - name: push
+        run: git push origin master
+
