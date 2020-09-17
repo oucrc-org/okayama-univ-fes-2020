@@ -24,7 +24,11 @@ jobs:
       - name: checkout
         run: git checkout master
       - name: branch
-        run: git branch
+        run: git branch -a
+      - name: log
+        run: git log --first-parent master -n 3
+      - name: log upstream
+        run: git log --first-parent upstream/master -n 3
       - name: merge
         run: git merge upstream/master
       - name: push
