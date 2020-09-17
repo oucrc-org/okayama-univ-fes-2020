@@ -18,6 +18,10 @@ jobs:
         run: cd okayama-univ-fes
       - name: ls
         run: ls -la
+      - name: cd
+        run: cd okayama-univ-fes
+      - name: ls
+        run: ls -la
       - name: set remote
         run: git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
       - name: fetch
