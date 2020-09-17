@@ -23,6 +23,8 @@ jobs:
         run: git fetch upstream
       - name: checkout
         run: git checkout master
+      - name: branch
+        run: git branch
       - name: merge
         run: git merge upstream/master
       - name: push
