@@ -14,10 +14,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
-      - name: ls
-        run: ls
       - name: cd
         run: cd okayama-univ-fes
+      - name: ls
+        run: ls -la
       - name: set remote
         run: git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
       - name: fetch
