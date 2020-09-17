@@ -17,6 +17,8 @@ jobs:
         run: git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
       - name: ls
         run: ls
+      - name: log
+        run: git log --first-parent master -n 3
       - name: cd
         run: cd okayama-univ-fes
       - name: set remote
