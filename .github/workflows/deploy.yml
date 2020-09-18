@@ -23,5 +23,5 @@ jobs:
       - name: merge
         run: cd okayama-univ-fes && git merge upstream/master
       - name: push
-        run: cd okayama-univ-fes && git push origin master
+        run: cd okayama-univ-fes && git push https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
 
