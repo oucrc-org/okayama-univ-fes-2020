@@ -14,28 +14,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
-      - name: cd
-        run: cd okayama-univ-fes
-      - name: ls
-        run: ls -la
-      - name: cd
-        run: cd okayama-univ-fes
-      - name: ls
-        run: ls -la
       - name: set remote
-        run: git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
+        run: cd okayama-univ-fes && git remote add upstream https://github.com/oucrc-org/okayama-univ-fes
       - name: fetch
-        run: git fetch upstream
+        run: cd okayama-univ-fes && git fetch upstream
       - name: checkout
-        run: git checkout master
-      - name: branch
-        run: git branch -a
-      - name: log
-        run: git log --first-parent master -n 3
-      - name: log upstream
-        run: git log --first-parent upstream/master -n 3
+        run: cd okayama-univ-fes && git checkout master
       - name: merge
-        run: git merge upstream/master
+        run: cd okayama-univ-fes && git merge upstream/master
       - name: push
-        run: git push origin master
+        run: cd okayama-univ-fes && git push origin master
 
