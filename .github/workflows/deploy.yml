@@ -24,6 +24,6 @@ jobs:
         run: cd okayama-univ-fes && git merge upstream/master
       - name: push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: cd okayama-univ-fes && git push https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/banira0428/okayama-univ-fes
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: cd okayama-univ-fes && git push https://banira0428:${PERSONAL_ACCESS_TOKEN}@github.com/banira0428/okayama-univ-fes
 
