@@ -27,7 +27,7 @@ export default function Club({club}) {
 }
 
 export async function getStaticPaths() {
-    const paths = getClubIds();
+    const paths = await getClubIds();
     return {
         paths,
         fallback: false
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const club = getClub(params.id);
+    const club = await getClub(params.id);
     return {
         props: {
             club: club
