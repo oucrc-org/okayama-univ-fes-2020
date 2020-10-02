@@ -19,11 +19,6 @@ export default class SimpleSlider extends Component {
                 title: "部活動、サークル紹介",
                 image: "/clubs.jpg",
                 link: "/clubs"
-            },
-            {
-                title: "研究室紹介",
-                image: "/president.jpg",
-                link: "/labs"
             }
         ];
 
@@ -58,7 +53,7 @@ export default class SimpleSlider extends Component {
                     }
                 </Slider>
                 <div className={"absolute text-white z-30 top-0 inset-x-0 text-center text-3xl font-bold"}>
-                    <div className={"h-12 border-solid border-white border w-px m-auto"}></div>
+                    <div className={"h-12 border-solid border-white border w-px m-auto"}> </div>
                     <p className={"text-shadow-md"}>2020/10/31 - 11/01</p>
                 </div>
                 <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none"
