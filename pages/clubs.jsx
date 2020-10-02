@@ -3,7 +3,7 @@ import Content from "../components/Content";
 import {getClubs} from "../lib/clubs";
 import Link from "next/link";
 
-export default function Clubs() {
+export default function Clubs({clubs}) {
     return (
         <Layout>
             <div className="w-full">
@@ -15,8 +15,8 @@ export default function Clubs() {
                         </div>
                     </div>
                     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-                        {getClubs().map((club) =>
-                            <Link href={`/clubs/${club.title}`}>
+                        {clubs.map((club) =>
+                            <Link href={`/clubs/${club.id}`}>
                                 <a>
                                     <li>
                                         <Content content={club}/>
@@ -29,4 +29,13 @@ export default function Clubs() {
             </div>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const clubs = await getClubs();
+    return {
+        props: {
+            clubs: clubs,
+        }
+    }
 }
