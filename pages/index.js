@@ -6,7 +6,6 @@ import Layout from "../components/Layout";
 import {getNotices} from "../lib/notices";
 import {getFixedContents} from "../lib/contents";
 import {getPickUpProject} from "../lib/projects";
-import Heading from "../components/common/Heading";
 
 export default function Index({fixedContents, pickupProject, notices}) {
     return (

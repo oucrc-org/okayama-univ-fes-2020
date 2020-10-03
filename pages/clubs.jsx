@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
-import Content from "../components/Content";
 import {getClubs} from "../lib/clubs";
 import Link from "next/link";
+import Club from "../components/Club";
 
 export default function Clubs({clubs}) {
     return (
@@ -19,7 +19,7 @@ export default function Clubs({clubs}) {
                             <Link href={`/clubs/${club.id}`}>
                                 <a>
                                     <li>
-                                        <Content content={club}/>
+                                        <Club club={club}/>
                                     </li>
                                 </a>
                             </Link>
@@ -32,7 +32,7 @@ export default function Clubs({clubs}) {
 }
 
 export async function getStaticProps() {
-    const clubs = await getClubs();
+    const clubs = (await getClubs()).filter((club) => club.project_type === 'intro');
     return {
         props: {
             clubs: clubs,
