@@ -16,9 +16,11 @@ export default function Policy() {
                         <Heading text="推奨環境"/>
                         <p className="mb-6">
                         当サイトでは、より安全で快適にご利用いただくために下記のブラウザを推奨致します。
-                        ・ Mozilla Firefox最新バージョン
-                        ・ Google Chrome最新バーション
-                        ・ Safari最新バージョン
+                            <ul>
+                                <li>- Mozilla Firefox最新バージョン</li>
+                                <li>- Google Chrome最新バーション</li>
+                                <li>- Safari最新バージョン</li>
+                            </ul>
                         </p>
 
                         <Heading text="JavaScriptについて"/>
