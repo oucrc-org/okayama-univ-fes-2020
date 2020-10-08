@@ -16,8 +16,8 @@ export default function Footer() {
         <footer className="text-center text-white p-16 bg-blue-900">
             <div className="flex">
                 <div className="flex-1">
-                    <FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="inline" />
-                    <FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="inline mx-12" />
+                    <a href = "https://twitter.com/gakusai_2020_"><FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="inline" /></a>
+                    <a href = "https://www.instagram.com/gakusai_2020_/"><FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="inline mx-12" /></a>
                     <FontAwesomeIcon icon={['fab', 'youtube']} width="30" className="inline" />
                 </div>
             </div>
