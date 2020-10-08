@@ -6,7 +6,7 @@ export default function Contents({fixedContents}) {
 
     return (
         <div className="mb-6">
-            <Heading text={"メッセージ"}/>
+            <Heading text={"コンテンツ"}/>
             <ul className="grid sm:grid-cols-2">
                 {fixedContents.map((content) => (
                     <li>
