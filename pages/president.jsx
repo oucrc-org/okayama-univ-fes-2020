@@ -1,9 +1,6 @@
 import Layout from "../components/Layout";
 
 export default function President() {
-
-    const images = ["/president.jpg", "/president.jpg", "/president.jpg", "/president.jpg", "/president.jpg", "/president.jpg"];
-
     return (
         <Layout>
             <div className="w-full">
@@ -24,11 +21,11 @@ export default function President() {
                             岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について
                             岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について</p>
                         <ul className="grid grid-cols-2">
-                            {images.map((image) => (
+                            {[...Array(9)].map((_,i) =>
                                 <li className="p-3">
-                                    <img src={image} alt=""/>
+                                    <img src={"/president/president" + (i+1) + ".jpg" } alt=""/>
                                 </li>
-                            ))}
+                            )}
                         </ul>
                     </div>
                 </div>
