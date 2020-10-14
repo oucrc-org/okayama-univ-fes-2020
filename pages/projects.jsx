@@ -1,8 +1,8 @@
 import Layout from "../components/Layout";
-import {getProjects} from "../lib/projects";
 import Project from "../components/Project";
+import {getClubs} from "../lib/clubs";
 
-export default function Projects() {
+export default function Projects({projects}) {
     return (
         <Layout>
             <div className="w-full">
@@ -15,8 +15,8 @@ export default function Projects() {
                     </div>
                     <div className="p-6">
                         {
-                            getProjects().map((project) =>
-                                <div className="mb-12">
+                            projects.map((project) =>
+                                <div className="mb-16">
                                     <Project project={project}/>
                                 </div>
                             )
@@ -26,4 +26,13 @@ export default function Projects() {
             </div>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const projects = (await getClubs()).filter((club) => club.project_type === 'project');
+    return {
+        props: {
+            projects: projects,
+        }
+    }
 }
