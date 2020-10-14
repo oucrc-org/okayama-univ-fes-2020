@@ -6,7 +6,7 @@ import {getFixedContents} from "../lib/contents";
 import {getPickUpProject} from "../lib/projects";
 import Heading from "../components/common/Heading";
 
-export default function Index({fixedContents, pickupProject, notices}) {
+export default function Index({fixedContents, pickupProject}) {
     return (
         <div>
             <Layout>
