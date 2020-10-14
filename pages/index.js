@@ -15,10 +15,12 @@ export default function Index({fixedContents, pickupProject}) {
                     <Message/>
                     <Contents fixedContents={fixedContents}/>
                     <Heading text={"ピックアップ団体企画"}/>
-                    <iframe className="mb-6" width="100%" height="360px"
-                            src={pickupProject.movie} frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen/>
+                    <div className="mx-3">
+                        <iframe className="mb-6" width="100%" height="360px"
+                                src={pickupProject.movie} frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen/>
+                    </div>
                 </div>
             </Layout>
         </div>
