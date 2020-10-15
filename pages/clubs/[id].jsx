@@ -17,7 +17,7 @@ export default function Club({club}) {
                     </div>
                     <div className="p-6">
                         <h2 className="text-blue-600 text-xl font-bold mb-3">この団体について</h2>
-                        <p className="mb-6 break-all">{changeToUrl(club.description)}</p>
+                        <p className="mb-6 break-all" dangerouslySetInnerHTML={changeToUrl(club.description)}></p>
                     </div>
                 </div>
             </div>

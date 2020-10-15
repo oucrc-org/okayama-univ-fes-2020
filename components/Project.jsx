@@ -11,7 +11,7 @@ export default function Project({project}) {
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen/>
             }
-            <p className="mb-6 break-all">{changeToUrl(project.description)}</p>
+            <p className="mb-6 break-all" dangerouslySetInnerHTML={changeToUrl(project.description)}></p>
         </div>
     )
 }
