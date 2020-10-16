@@ -1,3 +1,5 @@
+import changeToUrl from "../lib/regex";
+
 export default function Project({project}) {
     return (
         <div>
@@ -9,7 +11,7 @@ export default function Project({project}) {
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen/>
             }
-            <p className="mb-6 break-all">{project.description}</p>
+            <p className="mb-6 break-all" dangerouslySetInnerHTML={{__html: changeToUrl(project.description)}}></p>
         </div>
     )
 }
