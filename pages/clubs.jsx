@@ -32,7 +32,7 @@ export default function Clubs({clubs}) {
 }
 
 export async function getStaticProps() {
-    const clubs = (await getClubs()).filter((club) => club.project_type === 'intro');
+    const clubs = (await getClubs());
     return {
         props: {
             clubs: clubs,

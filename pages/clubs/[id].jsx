@@ -12,13 +12,26 @@ export default function Club({club}) {
                         <div className="z-10 absolute w-3/4 bg-blue-600 h-full"/>
                         <div className="z-20 relative content-center p-6 ml-auto mr-auto">
                             <h1 className="text-xl text-white mb-12 mt-12">{club.title}</h1>
-                            <img className="object-cover mb-6" src={club.main_image ? 'https://drive.google.com/uc?export=view&id=' + club.main_image + '&usp=sharing' : "/1080x720.png"} alt="サークルの画像"/>
+                            <img className="object-cover mb-6"
+                                 src={club.main_image ? 'https://drive.google.com/uc?export=view&id=' + club.main_image + '&usp=sharing' : "/1080x720.png"}
+                                 alt="サークルの画像"/>
                         </div>
                     </div>
                     <div className="p-6">
                         <h2 className="text-blue-600 text-xl font-bold mb-3">この団体について</h2>
-                        <p className="mb-6 break-all" dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}></p>
+                        <p className="mb-6 break-all"
+                           dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
+                    {club.movie &&
+                    <div className="p-6">
+                        <h2 className="text-blue-600 text-xl font-bold mb-3">紹介動画</h2>
+                        <iframe className="mb-6" width="100%" height="360px"
+                                src={'https://www.youtube.com/embed/' + club.movie}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen/>
+                    </div>
+                    }
                 </div>
             </div>
         </Layout>
