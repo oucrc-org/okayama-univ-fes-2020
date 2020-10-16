@@ -15,8 +15,21 @@ export default function Clubs({clubs, customs, categories}) {
                             <h1 className="text-xl text-white mt-3 mb-3">部活動・サークル紹介</h1>
                         </div>
                     </div>
+                    <Heading text="目次"/>
+                    <ul className="mx-3 mb-6">
+                        {categories.map(((category) =>
+                                <li className="mb-2" key={category.key}>
+                                    <Link href={"/clubs#" + category.key}>
+                                        <a className="text-blue-600">
+                                            {category.value}
+
+                                        </a>
+                                    </Link>
+                                </li>
+                        ))}
+                    </ul>
                     {categories.map((category) =>
-                        <div key={category.key} className="mb-6">
+                        <div id={category.key} key={category.key} className="mb-6">
                             <Heading text={category.value}/>
                             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                                 {clubs.filter((club) => club.circle_type === category.key).map((club) =>
