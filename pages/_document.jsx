@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
         return (
             <html>
             <Head>
-                <title>岡山大学大学祭</title>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}"/>
                 <script
                     dangerouslySetInnerHTML={{
