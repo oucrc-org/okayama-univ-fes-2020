@@ -31,7 +31,7 @@ export default class Header extends Component {
                     </Link>
                     <Link href="/">
                         <a>
-                            <p className="font-serif ">大学祭</p>
+                            <p className="font-serif ">岡山大学大学祭</p>
                         </a>
                     </Link>
                     <div className="flex-grow"/>
