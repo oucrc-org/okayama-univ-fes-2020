@@ -32,6 +32,18 @@ export default function Club({club}) {
                                 allowFullScreen/>
                     </div>
                     }
+                    {club.sub_images &&
+                    <div className="p-6">
+                        <h2 className="text-blue-600 text-xl font-bold mb-3">アルバム</h2>
+                        <ul className="grid grid-cols-2">
+                            {club.sub_images.split(', ').map((it,i) =>
+                                <li className="p-3" key={i}>
+                                    <img src={'https://drive.google.com/uc?export=view&id=' + it + '&usp=sharing' } alt=""/>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                    }
                 </div>
             </div>
         </Layout>
