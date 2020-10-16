@@ -30,10 +30,11 @@ export default class Header extends Component {
                         </a>
                     </Link>
                     <Link href="/">
-                        <a className="flex-grow">
+                        <a>
                             <p className="font-serif ">大学祭</p>
                         </a>
                     </Link>
+                    <div className="flex-grow"/>
                     <ul className="justify-center ml-auto mr-auto text-left hidden lg:block">
                         {
                             getNavigations().map((nav) =>
