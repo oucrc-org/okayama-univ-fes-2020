@@ -15,11 +15,10 @@ export default function Clubs({clubs, customs, categories}) {
                             <h1 className="text-xl text-white mt-3 mb-3">部活動・サークル紹介</h1>
                         </div>
                     </div>
-                    <ul>
-                        {categories.map((category) =>
-                            <div key={category.key} className="mb-6">
-                                <Heading text={category.value}/>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                    {categories.map((category) =>
+                        <div key={category.key} className="mb-6">
+                            <Heading text={category.value}/>
+                            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                                 {clubs.filter((club) => club.circle_type === category.key).map((club) =>
                                     <Link href={`/clubs/${customs.includes(club.title_en) ? club.title_en : club.id}`}>
                                         <a>
@@ -29,10 +28,9 @@ export default function Clubs({clubs, customs, categories}) {
                                         </a>
                                     </Link>
                                 )}
-                                </ul>
-                            </div>
-                        )}
-                    </ul>
+                            </ul>
+                        </div>
+                    )}
                 </div>
             </div>
         </Layout>
