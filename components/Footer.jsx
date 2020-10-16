@@ -25,7 +25,7 @@ export default function Footer() {
                     </Link>
                 </p>
                 <p>
-                    <Link href="https://oucrc.net">
+                    <Link href="//oucrc.net">
                         <a className="p-2 text-center text-xs">制作：電子計算機研究会</a>
                     </Link>
                 </p>
