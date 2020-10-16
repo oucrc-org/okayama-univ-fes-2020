@@ -10,8 +10,8 @@ export default function Club({club}) {
                 <div className="ml-auto mr-auto max-w-3xl">
                     <div className="relative mb-6">
                         <div className="z-10 absolute w-3/4 bg-blue-600 h-full"/>
-                        <div className="z-20 relative content-center p-6 ml-auto mr-auto">
-                            <h1 className="text-xl text-white mb-12 mt-12">{club.title}</h1>
+                        <div className="z-20 relative content-center p-6 ml-auto mr-auto ">
+                            <h1 className="text-xl text-white mb-12 mt-12 w-3/4">{club.title}</h1>
                             <img className="object-cover mb-6"
                                  src={club.main_image ? 'https://drive.google.com/uc?export=view&id=' + club.main_image + '&usp=sharing' : "/1080x720.png"}
                                  alt="サークルの画像"/>
