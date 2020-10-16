@@ -14,12 +14,9 @@ library.add(fas, fab);
 export default function Footer() {
     return (
         <footer className="text-center text-white p-16 bg-blue-900">
-            <div className="flex">
-                <div className="flex-1">
-                    <a href = "https://twitter.com/gakusai_2020_"><FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="inline" /></a>
-                    <a href = "https://www.instagram.com/gakusai_2020_/"><FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="inline mx-12" /></a>
-                    <a href = "https://www.youtube.com/channel/UClBwvdaxFg8uESJWK31H7ww/"><FontAwesomeIcon icon={['fab', 'youtube']} width="30" className="inline" /></a>
-                </div>
+            <div className="flex justify-center">
+                    <a href = "https://twitter.com/gakusai_2020_"><FontAwesomeIcon icon={['fab', 'twitter']} width="30" className="mx-5"/></a>
+                    <a href = "https://www.instagram.com/gakusai_2020_/"><FontAwesomeIcon icon={['fab', 'instagram']} width="30" className="mx-5"/></a>
             </div>
             <div className="p-4">
                 <p className="p-4">
