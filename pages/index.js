@@ -11,7 +11,7 @@ export default function Index({fixedContents, pickupProject}) {
         <div>
             <Layout>
                 <MainVisual/>
-                <div className="max-w-6xl container ml-auto mr-auto p-3">
+                <div className="max-w-6xl container ml-auto mr-auto">
                     <Message/>
                     <Contents fixedContents={fixedContents}/>
                     <Heading text={"ピックアップ団体企画"}/>
