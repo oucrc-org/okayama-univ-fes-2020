@@ -22,7 +22,7 @@ export default function President() {
                             岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について岡山大学について</p>
                         <ul className="grid grid-cols-2">
                             {[...Array(9)].map((_,i) =>
-                                <li className="p-3">
+                                <li className="p-3" key={i}>
                                     <img src={"/president/president" + (i+1) + ".jpg" } alt=""/>
                                 </li>
                             )}

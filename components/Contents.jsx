@@ -9,7 +9,7 @@ export default function Contents({fixedContents}) {
             <Heading text={"コンテンツ"}/>
             <ul className="grid sm:grid-cols-2">
                 {fixedContents.map((content) => (
-                    <li>
+                    <li key={content.title}>
                         <Link href={content.link}>
                             <a><Content key={content.id} content={content}/></a>
                         </Link>

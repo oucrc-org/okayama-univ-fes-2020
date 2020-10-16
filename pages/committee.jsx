@@ -24,8 +24,8 @@ export default function Committee() {
                             学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について
                             学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について学祭実行委員について</p>
                         <ul className="grid grid-cols-2">
-                            {images.map((image) => (
-                                <li className="p-3">
+                            {images.map((image,index) => (
+                                <li className="p-3" key={index}>
                                     <img src={image} alt=""/>
                                 </li>
                             ))}

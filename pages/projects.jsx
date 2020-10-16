@@ -16,7 +16,7 @@ export default function Projects({projects}) {
                     <div className="p-6">
                         {
                             projects.map((project) =>
-                                <div className="mb-16">
+                                <div className="mb-16" key={project.id}>
                                     <Project project={project}/>
                                 </div>
                             )

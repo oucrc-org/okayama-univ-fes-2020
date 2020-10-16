@@ -37,7 +37,7 @@ export default class SimpleSlider extends Component {
                     {
                         contents.map((content) =>
                             <Link href={content.link}>
-                                <a>
+                                <a key={content.title}>
                                     <div className="relative h-full">
                                         <img className="h-full object-cover" src={content.image}
                                              alt="メインビジュアル"/>
