@@ -1,6 +1,8 @@
 import Layout from "../components/Layout";
 import Project from "../components/Project";
 import {getClubs} from "../lib/clubs";
+import Heading from "../components/common/Heading";
+import Link from "next/link";
 
 export default function Projects({projects}) {
     return (
@@ -13,10 +15,22 @@ export default function Projects({projects}) {
                             <h1 className="text-xl text-white mt-3 mb-3 font-serif">企画一覧</h1>
                         </div>
                     </div>
+                    <Heading text="目次"/>
+                    <ul className="mx-3 mb-6">
+                        {projects.map(((project) =>
+                                <li className="mb-2" key={project.id}>
+                                    <Link href={"/projects#" + project.id}>
+                                        <a className="text-blue-600">
+                                            {project.title}
+                                        </a>
+                                    </Link>
+                                </li>
+                        ))}
+                    </ul>
                     <div className="p-6">
                         {
                             projects.map((project) =>
-                                <div className="mb-16" key={project.id}>
+                                <div id={project.id} className="mb-16" key={project.id}>
                                     <Project project={project}/>
                                 </div>
                             )
