@@ -52,7 +52,7 @@ export default function Clubs({clubs, customs, categories}) {
 
 export async function getStaticProps() {
     const clubs = (await getClubs());
-    const customs = ['okadaiart','pokemon_club','taekwondo'];
+    const customs = ['okadaiart','pokemon_club','taekwondo','darken'];
 
     return {
         props: {
