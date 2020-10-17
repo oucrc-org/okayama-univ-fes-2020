@@ -1,11 +1,12 @@
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
+//import test from "/1080x720.png";
 
 export default function Club({club}) {
     return (
         <Layout>
-
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">
                     <div className="relative mb-6">
@@ -23,7 +24,10 @@ export default function Club({club}) {
                            dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
 
-
+                    <div className="p-6 bg-yellow-400 border-2 border-black font-medium" style={{marginBottom:'5%'}}>
+                        以下の作品につきまして、作品の保存、スクリーンショット、二次利用(転載・コピー・引用)及び複製はお控えください。
+                    </div>
+                    <div dangerouslySetInnerHTML={{__html: setImgs()}}/>
                     {/*  作品展がここに入ります  */}
 
                 </div>
@@ -39,4 +43,16 @@ export async function getStaticProps() {
             club: club
         }
     }
+}
+
+//画像を張り付ける関数
+//参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
+function setImgs(){
+    var artName = ["okadaiart_1_ひまわり - 江尻明日香.jpg", "okadaiart_2_CIDER AND OCEAN - 江尻明日香.jpg"]
+    var result = ""
+    for (var i in artName){
+        result = result + "<img src = '/okadaiart/" + artName[i] + "' style='width: 100%' oncontextmenu='return false'/>"+
+        "<div class='p-6 border-2 border-black font-medium' style='margin-bottom: 10%; margin-right: 20%; margin-left: 20%; margin-top: 5%'>作品名</div>"
+    }
+    return result
 }
