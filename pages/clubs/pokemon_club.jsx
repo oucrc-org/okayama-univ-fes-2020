@@ -24,7 +24,7 @@ export default function Club({club}) {
                     </div>
                     <div className="p-6">
                         <h2 className="text-blue-600 text-xl font-bold mb-3">団体紹介資料</h2>
-                        <object data="/pdf/pokemon_club.pdf" type="application/pdf" className="w-full object-none h-screen"/>
+                        <object data="/pdf/pokemon_club.pdf" type="application/pdf" className="w-full object-none h-screen overflow-scroll"/>
                     </div>
                 </div>
             </div>
