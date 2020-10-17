@@ -16,7 +16,7 @@ export default function Projects({projects}) {
                         </div>
                     </div>
                     <Heading text="目次"/>
-                    <ul className="mx-3 mb-6">
+                    <ul className="mx-6 mb-6">
                         {projects.map(((project) =>
                                 <li className="mb-2" key={project.id}>
                                     <Link href={"/projects#" + project.id}>
