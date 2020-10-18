@@ -40,15 +40,17 @@ export default function Club({club}) {
                     <ul>
                         {artList.map((artList) =>
                             <li key={artList.number}>
-                                <img src={"/okadaiart/okadaiart_" + artList.number + "_" + artList.title + ".jpg"}
-                                    style={{width: '100%', marginBottom: '5%', border: '20px ridge #FFFFE0'}}/>
+                                <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
+                                    style={{width: '100%', marginBottom: '5%', border: '20px ridge #FFFFE0'}}
+                                    alt="表示に失敗しました"
+                                    onContextMenu={(e) => e.preventDefault()}/>
 
                                 {artList.number!="25-1" &&
-                                    <div class='p-6 border-2 border-black font-medium' style={{margin: '10%', marginTop: '5%'}}>
-                                        <p class='text-5xl text-center'>{artList.title.replace(".", ":").replace("／", "/")}</p>
-                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.type}</p>
-                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.author}</p>
-                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.sub}</p>
+                                    <div className='p-6 border-2 border-black font-medium' style={{margin: '10%', marginTop: '5%'}}>
+                                        <p className='text-5xl text-center'>{artList.title}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.type}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.author}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.sub}</p>
                                     </div>
                                 }
                             </li>
