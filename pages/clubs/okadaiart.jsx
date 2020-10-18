@@ -61,7 +61,7 @@ function setImgs(){
         var url = "okadaiart_" + artList[i].number + "_" + artList[i].title
         if(artList[i].number == "25-1"){
             result = result + 
-            "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; margin-bottom: 5%;' oncontextmenu='return false'/>"
+            "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; margin-bottom: 5%; border: 20px ridge #FFFFE0;' oncontextmenu='return false'/>"
             continue
         }
         result = result + 
