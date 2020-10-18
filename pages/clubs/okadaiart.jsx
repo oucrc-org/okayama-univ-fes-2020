@@ -1,4 +1,4 @@
-import { faFolder } from '@fortawesome/free-solid-svg-icons';
+import {faFolder} from '@fortawesome/free-solid-svg-icons';
 import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
@@ -13,13 +13,13 @@ import changeToUrl from "../../lib/regex";
     title:作品タイトル
     type~sub:作品のタイトルの下に書くやつ
 */
+import artList from '../../public/okadaiart/okadaiart'
 
 export default function Club({club}) {
-    const artList = require("../../public/okadaiart/okadaiart.json")
     return (
         <Layout>
             <div className="w-full">
-                <div className="ml-auto mr-auto max-w-3xl">
+                <div className="ml-auto mr-auto max-w-6xl">
                     <div className="relative mb-6">
                         <div className="z-10 absolute w-3/4 bg-blue-600 h-full"/>
                         <div className="z-20 relative content-center p-6 ml-auto mr-auto ">
@@ -35,21 +35,31 @@ export default function Club({club}) {
                            dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
 
-                    <ul>
-                        {artList.map((artList) =>
-                            <li key={artList.number}>
-                                <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
-                                    style={{width: '100%', marginBottom: '5%', border: '20px ridge #FFFFE0'}}
-                                    alt="表示に失敗しました"
-                                    onContextMenu={(e) => e.preventDefault()}/>
+                    <div className="p-6">
+                        <h2 className="text-blue-600 text-xl font-bold mb-3">作品展</h2>
+                        <p className="p-6 bg-yellow-400 border-2 border-black font-medium mb-6">
+                            以下の作品につきまして、作品の保存、スクリーンショット、二次利用(転載・コピー・引用)及び複製はお控えください。
+                        </p>
+                    </div>
 
-                                {artList.number!="25-1" &&
-                                    <div className='p-6 border-2 border-black font-medium' style={{margin: '10%', marginTop: '5%'}}>
-                                        <p className='text-5xl text-center'>{artList.title}</p>
+                    <ul className="mx-3">
+                        {artList.map((artList) =>
+                            <li key={artList.number} className="flex flex-wrap mb-12">
+                                <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
+                                     className="w-full md:w-2/3 mb-5"
+                                     style={{border: '10px ridge #FFFFE0'}}
+                                     alt="表示に失敗しました"
+                                     onContextMenu={(e) => e.preventDefault()}/>
+
+                                {artList.number !== "25-1" &&
+                                <div className="w-full md:w-1/3 mt-auto mb-5">
+                                    <div className='p-6 border border-black font-medium mx-5'>
+                                        <p className='text-4xl text-center'>{artList.title}</p>
                                         <p className='text-xl text-center whitespace-pre-wrap'>{artList.type}</p>
                                         <p className='text-xl text-center whitespace-pre-wrap'>{artList.author}</p>
                                         <p className='text-xl text-center whitespace-pre-wrap'>{artList.sub}</p>
                                     </div>
+                                </div>
                                 }
                             </li>
                         )}
