@@ -3,7 +3,21 @@ import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
 
+//画像を張り付ける関数
+//参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
+//額縁：http://www.netyasun.com/home/border.html
+
+//                    <div dangerouslySetInnerHTML={{__html: setImgs()}}/>
+
+/*
+    okadaiart.jsonの説明
+    number:作品の番号
+    title:作品タイトル
+    type~sub:作品のタイトルの下に書くやつ
+*/
+
 export default function Club({club}) {
+    const artList = require("../../public/okadaiart/okadaiart.json")
     return (
         <Layout>
             <div className="w-full">
@@ -23,12 +37,23 @@ export default function Club({club}) {
                            dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
 
-                    <div className="p-6 bg-yellow-400 border-2 border-black font-medium" style={{marginBottom:'5%'}}>
-                        以下の作品につきまして、作品の保存、スクリーンショット、二次利用(転載・コピー・引用)及び複製はお控えください。
-                    </div>
-                    <div dangerouslySetInnerHTML={{__html: setImgs()}}/>
-                    {/*  作品展がここに入ります  */}
+                    <ul>
+                        {artList.map((artList) =>
+                            <li key={artList.number}>
+                                <img src={"/okadaiart/okadaiart_" + artList.number + "_" + artList.title + ".jpg"}
+                                    style={{width: '100%', marginBottom: '5%', border: '20px ridge #FFFFE0'}}/>
 
+                                {artList.number!="25-1" &&
+                                    <div class='p-6 border-2 border-black font-medium' style={{margin: '10%', marginTop: '5%'}}>
+                                        <p class='text-5xl text-center'>{artList.title.replace(".", ":").replace("／", "/")}</p>
+                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.type}</p>
+                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.author}</p>
+                                        <p class='text-xl' style={{textAlign: 'center', whiteSpace: 'pre-wrap'}}>{artList.sub}</p>
+                                    </div>
+                                }
+                            </li>
+                        )}
+                    </ul>
                 </div>
             </div>
         </Layout>
@@ -42,36 +67,4 @@ export async function getStaticProps() {
             club: club
         }
     }
-}
-
-//画像を張り付ける関数
-//参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
-//額縁：http://www.netyasun.com/home/border.html
-
-/*
-    okadaiart.jsonの説明
-    number:作品の番号
-    title:作品タイトル
-    type~sub:作品のタイトルの下に書くやつ
-*/
-function setImgs(){
-    const artList = require("../../public/okadaiart/okadaiart.json")
-    let result = ""
-    for (var i in artList){
-        var url = "okadaiart_" + artList[i].number + "_" + artList[i].title
-        if(artList[i].number == "25-1"){
-            result = result + 
-            "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; margin-bottom: 5%; border: 20px ridge #FFFFE0;' oncontextmenu='return false'/>"
-            continue
-        }
-        result = result + 
-        "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; border: 20px ridge #FFFFE0;' oncontextmenu='return false'/>"+
-        "<div class='p-6 border-2 border-black font-medium' style='margin: 10%; margin-top: 5%;'>"+
-            "<p class='text-5xl text-center'>"+artList[i].title.replace(".", ":").replace("／", "/")+"</p>"+
-            "<p class='text-xl' style='text-align: center'>"+artList[i].type+"</p>"+
-            "<p class='text-xl' style='text-align: center'>"+artList[i].auther+"</p>"+
-            "<p class='text-xl' style='text-align: center'>"+artList[i].sub+"</p>"+
-        "</div>"
-    }
-    return result
 }
