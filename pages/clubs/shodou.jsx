@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
+import works from "../../public/shodou/shodou"
 
 export default function Club({club}) {
     return (
@@ -25,16 +26,16 @@ export default function Club({club}) {
                     <div className="p-6">
                         <h2 className="text-blue-600 text-xl font-bold mb-3">作品一覧</h2>
                         <img className="w-100" src="/shodou/title.jpg" alt="静楽展"/>
-                        {[...Array(22)].map((_, i) =>
+                        {works.map((work, i) =>
                             <div key={i} className="mb-6">
                                 <img src={"/shodou/" + (i + 1) + ".jpg"} alt="" className="mb-3"/>
                                 <div className="mx-6 border-2 p-3">
                                     <div className="grid grid-cols-2 mb-3">
-                                        <p className="text-center">文学部</p>
-                                        <p className="text-center">1年</p>
+                                        <p className="text-center">{work.faculty}学部</p>
+                                        <p className="text-center">{work.year}年</p>
                                     </div>
-                                    <p className="mb-3 text-center">氏名：岡大太郎</p>
-                                    <p>作品についてのコメント作品についてのコメント作品についてのコメント作品についてのコメント作品についてのコメント作品についてのコメント作品についてのコメント</p>
+                                    <p className="mb-3 text-center">{work.name}</p>
+                                    <p>{work.comment}</p>
                                 </div>
                             </div>
                         )}
