@@ -41,7 +41,7 @@ export default class SimpleSlider extends Component {
                                     <div className="relative h-full">
                                         <img className="h-full object-cover mx-auto min-w-full" src={content.image}
                                              alt="メインビジュアル"/>
-                                        <div className="absolute top-0 right-0 m-6 opacity-80 bg-blue-900 rounded">
+                                        <div className="absolute top-0 right-0 m-3 opacity-80 bg-blue-900 rounded">
                                             <p className="text-white text-sm md:text-xl font-bold p-3">
                                                 {content.title}
                                             </p>
@@ -53,8 +53,8 @@ export default class SimpleSlider extends Component {
                     }
                 </Slider>
                 <div className={"absolute text-white z-30 top-0 inset-x-0 text-center text-3xl font-bold"}>
-                    <div className={"h-12 border-solid border-white border w-px m-auto"}> </div>
-                    <p className={"text-shadow-md"}>2020/10/31 - 11/01</p>
+                    <div className="h-16 border-solid border-white border w-px m-auto"/>
+                    <p className="mx-auto text-shadow-md">2020/10/31 - 11/01</p>
                 </div>
                 <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none"
                         onClick={() => {
