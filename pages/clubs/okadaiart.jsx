@@ -7,8 +7,6 @@ import changeToUrl from "../../lib/regex";
 //参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
 //額縁：http://www.netyasun.com/home/border.html
 
-//                    <div dangerouslySetInnerHTML={{__html: setImgs()}}/>
-
 /*
     okadaiart.jsonの説明
     number:作品の番号
