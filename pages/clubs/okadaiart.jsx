@@ -1,11 +1,23 @@
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
 
+//画像を張り付ける関数
+//参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
+//額縁：http://www.netyasun.com/home/border.html
+
+/*
+    okadaiart.jsonの説明
+    number:作品の番号
+    title:作品タイトル
+    type~sub:作品のタイトルの下に書くやつ
+*/
+
 export default function Club({club}) {
+    const artList = require("../../public/okadaiart/okadaiart.json")
     return (
         <Layout>
-
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">
                     <div className="relative mb-6">
@@ -23,9 +35,25 @@ export default function Club({club}) {
                            dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
 
+                    <ul>
+                        {artList.map((artList) =>
+                            <li key={artList.number}>
+                                <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
+                                    style={{width: '100%', marginBottom: '5%', border: '20px ridge #FFFFE0'}}
+                                    alt="表示に失敗しました"
+                                    onContextMenu={(e) => e.preventDefault()}/>
 
-                    {/*  作品展がここに入ります  */}
-
+                                {artList.number!="25-1" &&
+                                    <div className='p-6 border-2 border-black font-medium' style={{margin: '10%', marginTop: '5%'}}>
+                                        <p className='text-5xl text-center'>{artList.title}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.type}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.author}</p>
+                                        <p className='text-xl text-center whitespace-pre-wrap'>{artList.sub}</p>
+                                    </div>
+                                }
+                            </li>
+                        )}
+                    </ul>
                 </div>
             </div>
         </Layout>
