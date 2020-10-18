@@ -2,7 +2,6 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import Layout from '../../components/Layout'
 import {getClubWithTitle} from "../../lib/clubs";
 import changeToUrl from "../../lib/regex";
-//import test from "/1080x720.png";
 
 export default function Club({club}) {
     return (
@@ -47,12 +46,32 @@ export async function getStaticProps() {
 
 //画像を張り付ける関数
 //参考文献：画像のコピー禁止　https://qiita.com/shisama/items/be0e432711de359598ed
+//額縁：http://www.netyasun.com/home/border.html
+
+/*
+    okadaiart.jsonの説明
+    number:作品の番号
+    title:作品タイトル
+    type~sub:作品のタイトルの下に書くやつ
+*/
 function setImgs(){
-    var artName = ["okadaiart_1_ひまわり - 江尻明日香.jpg", "okadaiart_2_CIDER AND OCEAN - 江尻明日香.jpg"]
-    var result = ""
-    for (var i in artName){
-        result = result + "<img src = '/okadaiart/" + artName[i] + "' style='width: 100%' oncontextmenu='return false'/>"+
-        "<div class='p-6 border-2 border-black font-medium' style='margin-bottom: 10%; margin-right: 20%; margin-left: 20%; margin-top: 5%'>作品名</div>"
+    const artList = require("../../public/okadaiart/okadaiart.json")
+    let result = ""
+    for (var i in artList){
+        var url = "okadaiart_" + artList[i].number + "_" + artList[i].title
+        if(artList[i].number == "25-1"){
+            result = result + 
+            "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; margin-bottom: 5%;' oncontextmenu='return false'/>"
+            continue
+        }
+        result = result + 
+        "<img src = '/okadaiart/" + url + ".jpg' style='width: 100%; border: 20px ridge #FFFFE0;' oncontextmenu='return false'/>"+
+        "<div class='p-6 border-2 border-black font-medium' style='margin: 10%; margin-top: 5%;'>"+
+            "<p class='text-5xl text-center'>"+artList[i].title.replace(".", ":").replace("／", "/")+"</p>"+
+            "<p class='text-xl' style='text-align: center'>"+artList[i].type+"</p>"+
+            "<p class='text-xl' style='text-align: center'>"+artList[i].auther+"</p>"+
+            "<p class='text-xl' style='text-align: center'>"+artList[i].sub+"</p>"+
+        "</div>"
     }
     return result
 }
