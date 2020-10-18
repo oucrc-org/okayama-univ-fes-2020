@@ -35,7 +35,7 @@ export default function Club({club}) {
                            dangerouslySetInnerHTML={{__html: changeToUrl(club.description)}}/>
                     </div>
 
-                    <div className="p-6">
+                    <div className="p-6" id="museum">
                         <h2 className="text-blue-600 text-xl font-bold mb-3">作品展</h2>
                         <p className="p-6 bg-yellow-400 border-2 border-black font-medium mb-6">
                             以下の作品につきまして、作品の保存、スクリーンショット、二次利用(転載・コピー・引用)及び複製はお控えください。

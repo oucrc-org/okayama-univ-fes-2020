@@ -31,7 +31,26 @@ export default function Projects({projects}) {
                         {
                             projects.map((project) =>
                                 <div id={project.id} className="mb-16" key={project.id}>
-                                    <Project project={project}/>
+                                    {
+                                        project.title_en === 'okadaiart'
+                                            ?
+                                            <div>
+                                                <h2 className="text-red-800 text-xl font-bold mb-3 font-serif">{project.title}</h2>
+                                                <img className="mb-3 w-full"
+                                                     src={'https://drive.google.com/uc?export=view&id=' + project.project_img + '&usp=sharing'}
+                                                     alt=""/>
+                                                <Link href={`/clubs/${project.title_en}/#museum`}>
+                                                    <div className="text-center">
+                                                        <a className="text-blue-600 text-xl">
+                                                            作品展はこちら
+                                                        </a>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            :
+                                            <Project project={project}/>
+                                    }
+
                                 </div>
                             )
                         }
@@ -44,6 +63,7 @@ export default function Projects({projects}) {
 
 export async function getStaticProps() {
     const projects = (await getClubs()).filter((club) => club.project_type === 'project');
+
     return {
         props: {
             projects: projects,
