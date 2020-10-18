@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
                             <Link href={content.link}>
                                 <a key={content.title}>
                                     <div className="relative h-full">
-                                        <img className="h-full object-cover" src={content.image}
+                                        <img className="h-full object-cover mx-auto min-w-full" src={content.image}
                                              alt="メインビジュアル"/>
                                         <div className="absolute top-0 right-0 m-6 opacity-80 bg-blue-900 rounded">
                                             <p className="text-white text-sm md:text-xl font-bold p-3">
