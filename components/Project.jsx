@@ -8,9 +8,10 @@ export default function Project({project}) {
                 <iframe className="mb-6" width="100%" height="360px"
                         src={'https://www.youtube.com/embed/' + project.movie}
                         frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        loading="lazy"/>
+                        loading="lazy"
+                />
             }
             <p className="mb-6 break-all" dangerouslySetInnerHTML={{__html: changeToUrl(project.description)}}/>
         </div>
