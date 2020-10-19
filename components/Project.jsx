@@ -9,7 +9,8 @@ export default function Project({project}) {
                         src={'https://www.youtube.com/embed/' + project.movie}
                         frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen/>
+                        allowFullScreen
+                        loading="lazy"/>
             }
             <p className="mb-6 break-all" dangerouslySetInnerHTML={{__html: changeToUrl(project.description)}}/>
         </div>

@@ -26,7 +26,8 @@ export default function Index({fixedContents, project}) {
                                     <h2 className="text-red-800 text-xl font-bold mb-3 font-serif">{project.title}</h2>
                                     <img className="mb-3 w-full"
                                          src={'https://drive.google.com/uc?export=view&id=' + project.project_img + '&usp=sharing'}
-                                         alt=""/>
+                                         alt=""
+                                         loading="lazy"/>
                                     <Link href={`/clubs/${project.title_en}/#museum`}>
                                         <a className="text-blue-600 text-xl">
                                             <div className="text-center">
