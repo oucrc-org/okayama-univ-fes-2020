@@ -40,11 +40,11 @@ export default function Projects({projects}) {
                                                      src={'https://drive.google.com/uc?export=view&id=' + project.project_img + '&usp=sharing'}
                                                      alt=""/>
                                                 <Link href={`/clubs/${project.title_en}/#museum`}>
-                                                    <div className="text-center">
-                                                        <a className="text-blue-600 text-xl">
+                                                    <a className="text-blue-600 text-xl">
+                                                        <div className="text-center">
                                                             作品展はこちら
-                                                        </a>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </Link>
                                             </div>
                                             :
