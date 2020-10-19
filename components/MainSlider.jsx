@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
                             <Link href={content.link}>
                                 <a key={content.title}>
                                     <div className="relative h-full">
-                                        <img className="h-full object-cover mx-auto min-w-full" src={content.image}
+                                        <img className="h-full object-cover mx-auto min-w-full rounded-b" src={content.image}
                                              alt="メインビジュアル"/>
                                         <div className="absolute top-0 right-0 m-3 opacity-80 bg-blue-900 rounded">
                                             <p className="text-white text-sm md:text-xl font-bold p-3">
@@ -56,16 +56,6 @@ export default class SimpleSlider extends Component {
                     <div className="h-16 border-solid border-white border w-px m-auto"/>
                     <p className="mx-auto text-shadow-md">2020/10/31 - 11/01</p>
                 </div>
-                <button className="absolute left-0 top-0 bottom-0 m-auto pl-3 xl:w-40 focus:outline-none"
-                        onClick={() => {
-                            this.slider.slickPrev()
-                        }}>◀︎
-                </button>
-                <button className="absolute right-0 top-0 bottom-0 m-auto pr-3 xl:w-40 focus:outline-none"
-                        onClick={() => {
-                            this.slider.slickNext()
-                        }}>▶︎
-                </button>
             </div>
         );
     }
