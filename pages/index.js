@@ -45,7 +45,7 @@ export default function Index({fixedContents, project}) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     return {
         props: {
