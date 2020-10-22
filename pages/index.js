@@ -40,6 +40,10 @@ export default function Index({fixedContents, project}) {
                                 <Project project={project}/>
                         }
                     </div>
+                    <Heading text={"オンライン大学祭アンケート"}/>
+                    <div className="mb-5">
+                        <p>サイトを閲覧していただいた方向けの<Link href={"//forms.gle/F5a2HRD5XSzr3nDs8"}><a className="text-blue-600">アンケートページ</a></Link>を公開しているので、回答していただけると助かります</p>
+                    </div>
                 </div>
             </Layout>
         </div>
