@@ -11,7 +11,7 @@ export default function President() {
                         <div className="z-20 relative content-center p-6 ml-auto mr-auto">
                             <h1 className="text-xl text-white mb-12 mt-12 font-serif">学長からのメッセージ</h1>
                             <iframe className="mb-12" width="100%" height="360px"
-                                    src="https://www.youtube.com/watch?v=Vd8ZS0PGiBw" frameBorder="0"
+                                    src="https://www.youtube.com/embed/Vd8ZS0PGiBw" frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen/>
                         </div>
