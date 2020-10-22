@@ -6,11 +6,6 @@ export default class SimpleSlider extends Component {
     render() {
         const contents = [
             {
-                title: "実行委員会",
-                image: "/committee.jpg",
-                link: "/committee"
-            },
-            {
                 title: "団体企画",
                 image: "/projects.jpg",
                 link: "/projects"
@@ -19,7 +14,13 @@ export default class SimpleSlider extends Component {
                 title: "部活動、サークル紹介",
                 image: "/clubs.jpg",
                 link: "/clubs"
-            }
+            },
+            {
+                title: "実行委員会",
+                image: "/committee.jpg",
+                link: "/committee"
+            },
+
         ];
 
         const settings = {

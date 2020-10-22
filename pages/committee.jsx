@@ -2,8 +2,6 @@ import Layout from "../components/Layout";
 
 export default function Committee() {
 
-    const images = ["/committee.jpg", "/committee.jpg", "/committee.jpg", "/committee.jpg", "/committee.jpg", "/committee.jpg"];
-
     return (
         <Layout>
             <div className="w-full">
@@ -25,13 +23,7 @@ export default function Committee() {
                         <h2 className="text-green-600 text-xl font-bold mb-3 font-serif">大学祭テーマについて</h2>
                         <p className="mb-6">2020年度岡山大学祭のテーマは「祭旬先取り岡大祭～オンラインでもまかしん祭～」です。新型コロナウイルスが猛威を振るう中、人と人とが会わずともコミュニケーションをとることができる要素として「オンライン」が注目されています。そんな「最旬」なオンラインを「先取り」して、参加していただいた方々や、視聴してくださった皆様に大学祭を楽しんでいただきたいという思いが込められています。今までにない新たな岡山大学祭を心行くまでお楽しみください。
                         </p>
-                        <ul className="grid grid-cols-2">
-                            {images.map((image,index) => (
-                                <li className="p-3" key={index}>
-                                    <img src={image} alt=""/>
-                                </li>
-                            ))}
-                        </ul>
+                        <img src="/committee_detail.jpg" alt="学祭実行委員"/>
                     </div>
                 </div>
             </div>
