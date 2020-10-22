@@ -5,6 +5,7 @@ import changeToUrl from "../../lib/regex";
 export default function Club({club}) {
     return (
         <Layout>
+            <div className={"shutter"}></div>
             <div className={"relative eyecatch p-20"}>
                 <div className={"border-4 w-auto h-full rounded border-rainbow"}></div>
                 <img src="/logo_oucrc.png"
