@@ -28,6 +28,7 @@ export default function Clubs({clubs, customs, categories}) {
                                 </li>
                         ))}
                     </ul>
+                    <p className="text-red-600 mx-3 mb-5">※本学の公認団体については、活動前後の継続的な検温や、アルコール消毒、定期的な換気等、感染症対策を講じた上で活動を行っております。また、動画や写真にはコロナ禍以前に活動していた時のものを含みます</p>
                     {categories.map((category) =>
                         <div id={category.key} key={category.key} className="mb-6">
                             <Heading text={category.value}/>

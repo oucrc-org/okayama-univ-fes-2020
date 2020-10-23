@@ -12,7 +12,7 @@ export default function Projects({projects}) {
                     <div className="relative mb-6">
                         <div className="z-10 absolute w-3/4 bg-red-800 h-full"/>
                         <div className="z-20 relative content-center pl-6 pt-3 pb-3 ml-auto mr-auto">
-                            <h1 className="text-xl text-white mt-3 mb-3 font-serif">企画一覧</h1>
+                            <h1 className="text-xl text-white mt-3 mb-3 font-serif">団体企画一覧</h1>
                         </div>
                     </div>
                     <Heading text="目次"/>
@@ -27,6 +27,7 @@ export default function Projects({projects}) {
                                 </li>
                         ))}
                     </ul>
+                    <p className="text-red-600 mx-6">※本学の公認団体については、活動前後の継続的な検温や、アルコール消毒、定期的な換気等、感染症対策を講じた上で活動を行っております。また、動画や写真にはコロナ禍以前に活動していた時のものを含みます</p>
                     <div className="p-6">
                         {
                             projects.map((project) =>
