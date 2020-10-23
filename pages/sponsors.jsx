@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import {getSponsors} from "../lib/sponsors";
+import Heading from "../components/common/Heading";
 
 export default function Sponsors() {
     return (
@@ -21,6 +22,15 @@ export default function Sponsors() {
                             )}
                         </ul>
                     </div>
+                    <Heading text={"その他ご協力いただいた団体"}/>
+                    <ul className="p-6">
+                        <li>
+                            <p className="text-xl p-1">・電子計算機研究会（WEBページ制作）</p>
+                        </li>
+                        <li>
+                            <p className="text-xl p-1">・放送文化部（動画撮影）</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </Layout>
