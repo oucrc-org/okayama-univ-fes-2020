@@ -41,7 +41,7 @@ export default function Index({fixedContents, project}) {
                         }
                     </div>
                     <Heading text={"オンライン大学祭アンケート"}/>
-                    <div className="mb-5">
+                    <div className="mb-5 mx-3">
                         <p>サイトを閲覧していただいた方向けの<Link href={"//forms.gle/F5a2HRD5XSzr3nDs8"}><a className="text-blue-600">アンケートページ</a></Link>を公開しているので、是非ご回答いただければ幸いです</p>
                     </div>
                 </div>
