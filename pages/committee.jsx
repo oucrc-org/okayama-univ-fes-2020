@@ -24,6 +24,13 @@ export default function Committee() {
                         <p className="mb-6">2020年度岡山大学祭のテーマは「祭旬先取り岡大祭～オンラインでもまかしん祭～」です。新型コロナウイルスが猛威を振るう中、人と人とが会わずともコミュニケーションをとることができる要素として「オンライン」が注目されています。そんな「最旬」なオンラインを「先取り」して、参加していただいた方々や、視聴してくださった皆様に大学祭を楽しんでいただきたいという思いが込められています。今までにない新たな岡山大学祭を心行くまでお楽しみください。
                         </p>
                         <img src="/committee_detail.jpg" alt="学祭実行委員"/>
+                        <ul className="grid grid-cols-2">
+                            {[...Array(9)].map((_,i) =>
+                                <li className="p-3" key={i}>
+                                    <img src={"/committee/committee" + (i+1) + ".jpg" } alt=""/>
+                                </li>
+                            )}
+                        </ul>
                     </div>
                 </div>
             </div>
