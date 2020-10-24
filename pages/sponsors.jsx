@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
-import {getSponsors} from "../lib/sponsors";
 import Heading from "../components/common/Heading";
+import sponsors from "../public/sponsors";
+import Link from "next/link";
 
 export default function Sponsors() {
     return (
@@ -15,10 +16,14 @@ export default function Sponsors() {
                     </div>
                     <div className="p-6">
                         <ul>
-                            {getSponsors().map((sponsor) =>
-                                <li key={sponsor.id}>
-                                    <p className="text-xl p-1">・{sponsor.title}</p>
-                                </li>
+                            {sponsors.map((sponsor) =>
+                                <Link href={sponsor.url}>
+                                    <a>
+                                        <li key={sponsor.title} className="text-blue-600">
+                                            <p className="text-xl p-1">・{sponsor.title}</p>
+                                        </li>
+                                    </a>
+                                </Link>
                             )}
                         </ul>
                     </div>
