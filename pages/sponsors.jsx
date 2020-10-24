@@ -18,7 +18,7 @@ export default function Sponsors() {
                         <ul>
                             {sponsors.map((sponsor) =>
                                 <Link href={sponsor.url}>
-                                    <a>
+                                    <a target="_blank" rel="noopener noreferrer">
                                         <li key={sponsor.title} className="text-blue-600">
                                             <p className="text-xl p-1">・{sponsor.title}</p>
                                         </li>

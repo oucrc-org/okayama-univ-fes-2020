@@ -26,7 +26,7 @@ export default function Footer() {
                 </p>
                 <p>
                     <Link href="//oucrc.net">
-                        <a className="p-2 text-center text-xs">制作：電子計算機研究会</a>
+                        <a className="p-2 text-center text-xs" target="_blank" rel="noopener noreferrer">制作：電子計算機研究会</a>
                     </Link>
                 </p>
             </div>
