@@ -29,12 +29,20 @@ export default function Sponsors() {
                     </div>
                     <Heading text={"その他ご協力いただいた団体"}/>
                     <ul className="p-6">
-                        <li>
-                            <p className="text-xl p-1">・電子計算機研究会（WEBページ制作）</p>
-                        </li>
-                        <li>
-                            <p className="text-xl p-1">・放送文化部（動画撮影）</p>
-                        </li>
+                        <Link href="//oucrc.net">
+                            <a target="_blank" rel="noopener noreferrer">
+                                <li>
+                                    <p className="text-xl p-1 text-blue-600">・電子計算機研究会（WEBページ制作）</p>
+                                </li>
+                            </a>
+                        </Link>
+                        <Link href="//seikagai.ccsv.okayama-u.ac.jp/data/81/club_top_dtl/">
+                            <a target="_blank" rel="noopener noreferrer">
+                                <li>
+                                    <p className="text-xl p-1 text-blue-600">・放送文化部（動画撮影）</p>
+                                </li>
+                            </a>
+                        </Link>
                     </ul>
                 </div>
             </div>
