@@ -36,7 +36,7 @@ export default function Sponsors() {
                                 </li>
                             </a>
                         </Link>
-                        <Link href="//seikagai.ccsv.okayama-u.ac.jp/data/81/club_top_dtl/">
+                        <Link href="//ohb-radio.net/">
                             <a target="_blank" rel="noopener noreferrer">
                                 <li>
                                     <p className="text-xl p-1 text-blue-600">・放送文化部（動画撮影）</p>
