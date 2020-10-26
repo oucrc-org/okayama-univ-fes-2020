@@ -334,10 +334,10 @@ export default function Club({club}) {
                     </div>
                 </div>
             </div>
-            <div className={"py-20 my-20 center-pc"}>
-                <h2 className={"h2 px-4 py-8"}>OUCRCに興味をお持ちですか？<br/>公式サイトもおすすめです。</h2>
+            <div className={"py-20 center-pc two_kai"}>
+                <h2 className={"h2 px-4 py-8"}><span className={"bg-white"}>OUCRCに興味をお持ちですか？<br/>公式サイトもおすすめです</span></h2>
                 <a href={"https://oucrc.net"}>
-                    <img src="/logo_oucrc.png" className={"m-auto"} alt={"oucrcのロゴ"}/>
+                    <img src="/logo_oucrc.png" className={"m-auto bg-white mt-20 p-4"} alt={"oucrcのロゴ"}/>
                 </a>
             </div>
         </Layout>
