@@ -70,7 +70,7 @@ export default function Club({club}) {
                 </div>
             </div>
             <div className={"bg-gray-200 d2"}>
-                <h2 className={"center-pc h2 text-gray-800 py-20 px-4"}>部員、2Dの作品<br/>びゅーーーん</h2>
+                <h2 className={"h2 text-gray-800 py-20 px-20"}>部員、2Dの作品びゅーーーん</h2>
                 <div className={"flex flex-wrap mb-12"}>
                     <div className={"sm:w-full md:w-1/2 md:p-20"}>
                         <h3 className={"h3 px-8 py-4 text-gray-800 bg-white"}>ミニチュアサイズのロボットハンド</h3>
@@ -207,7 +207,7 @@ export default function Club({club}) {
 
             </div>
             <div className={"two_kai py-20 mt-20 text-pink-600"}>
-                <h2 className={"h2 mt-6 mb-6 bg-white px-16"}>２回生の作品がお披露目です。</h2>
+                <h2 className={"h2 center-pc"}><span className={"bg-white"}>２回生の作品がお披露目です。</span></h2>
             </div>
             <div className={"w-full vivace overflow-y-scroll relative"}>
                 <div className={"absolute z-10 w-full px-12 lg:px-48"}>
@@ -239,7 +239,7 @@ export default function Club({club}) {
                 <img className={"w-full h-full object-cover opacity-50 sticky top-0"} src={"/oucrc/two/1.jpg"} alt={"vivace"}/>
             </div>
             <div className={"two_kai py-20 bg-black"}>
-                <h3 className={"h3 text-white text-shadow-black mx-8 text-center"}>楽曲リスト(一部抜粋)</h3>
+                <h3 className={"h3 text-white text-shadow-black my-8 text-center"}>楽曲リスト<br/>(一部抜粋)</h3>
                 <div className={"overflow-x-auto"}>
                     <table className="bg-black table-fixed text-white m-auto w-980px">
                         <thead>
@@ -307,7 +307,7 @@ export default function Club({club}) {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen></iframe>
                 </div>
-                <h3 className={"h3 text-white text-shadow-black mx-8 my-12"}>ゲームイメージ画像</h3>
+                <h3 className={"h3 text-white text-shadow-black my-12 text-center"}>ゲームイメージ画像</h3>
                 <div className={"flex flex-wrap mb-12"}>
                     <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
                         <img src={"/oucrc/two/2.jpg"} alt={"vivace2"}/>
@@ -317,7 +317,7 @@ export default function Club({club}) {
                     </div>
                 </div>
                 <div className={"bg-white py-12"}>
-                    <h3 className={"h3 text-pink-600 mx-8 mb-12"}>別のゲームも製作中！？</h3>
+                    <h3 className={"h3 text-pink-600 text-center mb-12"}>別のゲームも製作中！？</h3>
                     <div className={"flex flex-wrap"}>
                         <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
                             <img src={"/oucrc/two/4.png"} alt={"game1"}/>
