@@ -211,8 +211,8 @@ export default function Club({club}) {
             </div>
             <div className={"w-full vivace overflow-y-scroll relative"}>
                 <div className={"absolute z-10 w-full px-12 lg:px-48"}>
-                    <h2 className={"h2 mt-24 text-white text-shadow-lightblue"}>VIVACE ヴィヴァーチェ</h2>
-                    <p className={"mt-48 text-bold text-shadow-white"}>
+                    <h2 className={"h2 mt-24 text-white text-shadow-lightblue center-pc"}>VIVACE ヴィヴァーチェ</h2>
+                    <p className={"mt-48 text-bold text-shadow-white center-pc"}>
                         スマートフォンとPC両方でプレイ可能(予定)の音ゲーです。<br/>
                         降ってきたノーツをタッチパネルかキーボードで叩くよくある感じのアレです。<br/>
                         <br/>
@@ -222,7 +222,7 @@ export default function Club({club}) {
                         <br/>
                         制作者はいけちぃと智重とふぉです。(楽曲は他にも数名)<br/>
                     </p>
-                    <p　className={"mt-48 text-bold text-shadow-white mb-16"}>
+                    <p　className={"mt-48 text-bold text-shadow-white mb-16 center-pc"}>
                         制作期間は放置してたのも含めると5ヶ月超えてると思います<br/>
                         <br/>
                         制作環境は各自VSCodeにGit導入し，Discordでやりとりしてたのでオンラインが主です<br/>
@@ -235,102 +235,102 @@ export default function Club({club}) {
                         <br/>
                         曲、もーちょい増えたり変更されたりします
                     </p>
+                    <div className={"py-20"}>
+                        <h3 className={"h3 text-white text-shadow-black my-8 text-center"}>楽曲リスト<br/>(一部抜粋)</h3>
+                        <div className={"overflow-x-auto"}>
+                            <table className="bg-black table-fixed text-white m-auto w-980px">
+                                <thead>
+                                <tr>
+                                    <th className="px-4 py-2">Title</th>
+                                    <th className="px-4 py-2">作曲者</th>
+                                    <th className="px-4 py-2">ジャンル</th>
+                                    <th className="px-4 py-2">コメント</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td className="border px-4 py-2">Kyubi</td>
+                                    <td className="border px-4 py-2">pho</td>
+                                    <td className="border px-4 py-2">Hardcore</td>
+                                    <td className="border px-4 py-2">九尾の狐です。強そう。	</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">反転孤独線</td>
+                                    <td className="border px-4 py-2">pho feat. 重音テト</td>
+                                    <td className="border px-4 py-2">J-pop</td>
+                                    <td className="border px-4 py-2">窓際、色褪せた一枚の絵に、もう二度と戻れはしないとしても。</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">淡色</td>
+                                    <td className="border px-4 py-2">pho feat. 重音テト</td>
+                                    <td className="border px-4 py-2">J-pop</td>
+                                    <td className="border px-4 py-2">きっと次の春に、また。	</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">時計塔</td>
+                                    <td className="border px-4 py-2">智重</td>
+                                    <td className="border px-4 py-2">Free style</td>
+                                    <td className="border px-4 py-2">SC-88Pro Ver.	</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">終点目指して</td>
+                                    <td className="border px-4 py-2">智重</td>
+                                    <td className="border px-4 py-2">Free style</td>
+                                    <td className="border px-4 py-2">SC-88Pro Ver.	</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">終点目指して</td>
+                                    <td className="border px-4 py-2">智重</td>
+                                    <td className="border px-4 py-2">Free style</td>
+                                    <td className="border px-4 py-2">SC-88Pro Ver.	</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">CryStatuS</td>
+                                    <td className="border px-4 py-2">根菜</td>
+                                    <td className="border px-4 py-2">Hardcore</td>
+                                    <td className="border px-4 py-2">タイトルは「クリステーツ」と読みます。早くて速い曲を作ったので楽しんでいただければ。</td>
+                                </tr>
+                                <tr>
+                                    <td className="border px-4 py-2">Maiden Voyage</td>
+                                    <td className="border px-4 py-2">Kade</td>
+                                    <td className="border px-4 py-2">Modern Jazz Rock</td>
+                                    <td className="border px-4 py-2">初めて曲を作りました。ジャズロックはいいぞ。</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className={"video mt-12"}>
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/pBayNdStr0M" frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen></iframe>
+                        </div>
+                        <h3 className={"h3 text-white text-shadow-black my-12 text-center"}>ゲームイメージ画像</h3>
+                        <div className={"flex flex-wrap mb-12"}>
+                            <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
+                                <img src={"/oucrc/two/2.jpg"} alt={"vivace2"}/>
+                            </div>
+                            <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
+                                <img src={"/oucrc/two/3.jpg"} alt={"vivace3"}/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <img className={"w-full h-full object-cover opacity-50 sticky top-0"} src={"/oucrc/two/1.jpg"} alt={"vivace"}/>
             </div>
-            <div className={"two_kai py-20 bg-black"}>
-                <h3 className={"h3 text-white text-shadow-black my-8 text-center"}>楽曲リスト<br/>(一部抜粋)</h3>
-                <div className={"overflow-x-auto"}>
-                    <table className="bg-black table-fixed text-white m-auto w-980px">
-                        <thead>
-                        <tr>
-                            <th className="px-4 py-2">Title</th>
-                            <th className="px-4 py-2">作曲者</th>
-                            <th className="px-4 py-2">ジャンル</th>
-                            <th className="px-4 py-2">コメント</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td className="border px-4 py-2">Kyubi</td>
-                            <td className="border px-4 py-2">pho</td>
-                            <td className="border px-4 py-2">Hardcore</td>
-                            <td className="border px-4 py-2">九尾の狐です。強そう。	</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">反転孤独線</td>
-                            <td className="border px-4 py-2">pho feat. 重音テト</td>
-                            <td className="border px-4 py-2">J-pop</td>
-                            <td className="border px-4 py-2">窓際、色褪せた一枚の絵に、もう二度と戻れはしないとしても。</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">淡色</td>
-                            <td className="border px-4 py-2">pho feat. 重音テト</td>
-                            <td className="border px-4 py-2">J-pop</td>
-                            <td className="border px-4 py-2">きっと次の春に、また。	</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">時計塔</td>
-                            <td className="border px-4 py-2">智重</td>
-                            <td className="border px-4 py-2">Free style</td>
-                            <td className="border px-4 py-2">SC-88Pro Ver.	</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">終点目指して</td>
-                            <td className="border px-4 py-2">智重</td>
-                            <td className="border px-4 py-2">Free style</td>
-                            <td className="border px-4 py-2">SC-88Pro Ver.	</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">終点目指して</td>
-                            <td className="border px-4 py-2">智重</td>
-                            <td className="border px-4 py-2">Free style</td>
-                            <td className="border px-4 py-2">SC-88Pro Ver.	</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">CryStatuS</td>
-                            <td className="border px-4 py-2">根菜</td>
-                            <td className="border px-4 py-2">Hardcore</td>
-                            <td className="border px-4 py-2">タイトルは「クリステーツ」と読みます。早くて速い曲を作ったので楽しんでいただければ。</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">Maiden Voyage</td>
-                            <td className="border px-4 py-2">Kade</td>
-                            <td className="border px-4 py-2">Modern Jazz Rock</td>
-                            <td className="border px-4 py-2">初めて曲を作りました。ジャズロックはいいぞ。</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div className={"video mt-12"}>
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/pBayNdStr0M" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
-                </div>
-                <h3 className={"h3 text-white text-shadow-black my-12 text-center"}>ゲームイメージ画像</h3>
-                <div className={"flex flex-wrap mb-12"}>
+            <div className={"bg-white py-12"}>
+                <h3 className={"h3 text-pink-600 text-center mb-12"}>別のゲームも製作中！？</h3>
+                <div className={"flex flex-wrap"}>
                     <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                        <img src={"/oucrc/two/2.jpg"} alt={"vivace2"}/>
+                        <img src={"/oucrc/two/4.png"} alt={"game1"}/>
                     </div>
                     <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                        <img src={"/oucrc/two/3.jpg"} alt={"vivace3"}/>
+                        <img src={"/oucrc/two/5.png"} alt={"game2"}/>
                     </div>
-                </div>
-                <div className={"bg-white py-12"}>
-                    <h3 className={"h3 text-pink-600 text-center mb-12"}>別のゲームも製作中！？</h3>
-                    <div className={"flex flex-wrap"}>
-                        <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                            <img src={"/oucrc/two/4.png"} alt={"game1"}/>
-                        </div>
-                        <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                            <img src={"/oucrc/two/5.png"} alt={"game2"}/>
-                        </div>
-                        <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                            <img src={"/oucrc/two/6.jpg"} alt={"game3"}/>
-                        </div>
-                        <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
-                            <img src={"/oucrc/two/7.jpg"} alt={"game4"}/>
-                        </div>
+                    <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
+                        <img src={"/oucrc/two/6.jpg"} alt={"game3"}/>
+                    </div>
+                    <div className={"sm:w-full md:w-1/2 m-auto p-4"}>
+                        <img src={"/oucrc/two/7.jpg"} alt={"game4"}/>
                     </div>
                 </div>
             </div>
