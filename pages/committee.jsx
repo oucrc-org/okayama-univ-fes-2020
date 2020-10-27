@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Link from "next/link";
 
 export default function Committee() {
 
@@ -23,6 +24,12 @@ export default function Committee() {
                         <h2 className="text-green-600 text-xl font-bold mb-3 font-serif">大学祭テーマについて</h2>
                         <p className="mb-6">2020年度岡山大学祭のテーマは「祭旬先取り岡大祭～オンラインでもまかしん祭～」です。新型コロナウイルスが猛威を振るう中、人と人とが会わずともコミュニケーションをとることができる要素として「オンライン」が注目されています。そんな「最旬」なオンラインを「先取り」して、参加していただいた方々や、視聴してくださった皆様に大学祭を楽しんでいただきたいという思いが込められています。今までにない新たな岡山大学祭を心行くまでお楽しみください。
                         </p>
+                        <h2 className="text-green-600 text-xl font-bold mb-3 font-serif">ホームページ</h2>
+                        <Link href="//alicepetitlapin032.wixsite.com/mysite">
+                            <a><p className="text-blue-600 mb-6">大学祭実行委員会ホームページ</p>
+                            </a>
+                        </Link>
+
                         <h2 className="text-green-600 text-xl font-bold mb-3 font-serif">紹介動画</h2>
                         <iframe className="mb-6" width="100%" height="360px"
                                 src={'https://www.youtube.com/embed/Xwzya7frcIw'}
