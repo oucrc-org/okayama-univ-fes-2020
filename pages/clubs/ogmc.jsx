@@ -36,11 +36,11 @@ export default function Club({ club }) {
                                 {partList.image &&
                                     <img className="mt-5" src={partList.image} alt="画像" />
                                 }
-                                <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 mt-2 px-4 py-3 shadow-md">
-                                    <div class="flex">
+                                <div className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 mt-2 px-4 py-3 shadow-md">
+                                    <div className="flex">
                                         <div>
-                                            <p class="font-bold">{partList.title}</p>
-                                            <p class="text-sm mt-1">{partList.description}</p>
+                                            <p className="font-bold">{partList.title}</p>
+                                            <p className="text-sm mt-1">{partList.description}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,10 @@ export default function Club({ club }) {
                         <h2 className="text-blue-600 text-xl font-bold mb-3">{messageList.latestInformation.title}</h2>
 
                         {messageList.latestInformation.links.map((linkList) =>
-                            <p><span className="font-bold mr-5">・{linkList.title}</span>{linkList.description}</p>
+                            <p className="break-all mt-2">
+                                <span className="font-bold inline-block mr-5">・{linkList.title}</span>
+                                <a className="inline-block" href={linkList.description} target="_blank" rel="noopener noreferrer">{linkList.description}</a>
+                            </p>
                         )}
                     </div>
 
