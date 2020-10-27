@@ -60,7 +60,7 @@ export default function Club({ club }) {
                         {messageList.latestInformation.links.map((linkList) =>
                             <p className="break-all mt-2">
                                 <span className="font-bold inline-block mr-5">・{linkList.title}</span>
-                                <a className="inline-block" href={linkList.description} target="_blank" rel="noopener noreferrer">{linkList.description}</a>
+                                <a className="inline-block text-blue-600" href={linkList.description} target="_blank" rel="noopener noreferrer">{linkList.description}</a>
                             </p>
                         )}
                     </div>
