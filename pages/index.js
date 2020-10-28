@@ -7,7 +7,7 @@ import Heading from "../components/common/Heading";
 import Link from "next/link";
 import Project from "../components/Project";
 import {getClubs} from "../lib/clubs";
-import getPickUpProjectId from "../lib/pickup";
+import getPickUpProjectId, {getPickUpProject} from "../lib/pickup";
 
 export default function Index({fixedContents, project}) {
     return (
@@ -50,7 +50,7 @@ export default function Index({fixedContents, project}) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     return {
         props: {
