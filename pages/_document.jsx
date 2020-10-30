@@ -18,6 +18,8 @@ export default class MyDocument extends Document {
                         `,
                     }}
                 />
+                <meta property="og:image" content="/public/committee.jpg" />
+                <meta property="og:site_name" content="岡山大学大学祭2020" />
             </Head>
             <body>
             <Main/>

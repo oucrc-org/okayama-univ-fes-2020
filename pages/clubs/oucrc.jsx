@@ -356,7 +356,7 @@ export default function Club({ club }) {
                             </div>
                         </div>
                         <div className="mt-2 mb-3 text-center">
-                            <a href="https://play.google.com/store/apps/details?id=com.vivace_app" target="_blank" rel="noopener noreferrer" className="bg-blue-900 px-5 py-4 rounded-md text-white">今すぐプレイ！(GooglePlayStore)</a>
+                            <a href="https://drive.google.com/drive/folders/169QtYdOC4EgHEejDCZfhyG95BKes1v8i?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-blue-900 px-5 py-4 rounded-md text-white">今すぐプレイ！</a>
                         </div>
                     </div>
                 </div>
