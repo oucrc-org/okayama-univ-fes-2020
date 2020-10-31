@@ -18,13 +18,13 @@ export default class MyDocument extends Document {
                         `,
                     }}
                 />
-                <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/public/image/committee.jpg"/>
+                <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
                 <meta property="og:site_name" content="岡山大学大学祭2020" />
                 <meta property="og:description" content="岡山大学大学祭のホームページです" />
                 <meta name="twitter:title" content="岡山大学大学祭2020" />
                 <meta name="twitter:description" content="岡山大学大学祭のホームページです"/>
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:image:src" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/public/image/committee.jpg"/>
+                <meta name="twitter:image:src" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/public/committee.jpg"/>
             </Head>
             <body>
             <Main/>
