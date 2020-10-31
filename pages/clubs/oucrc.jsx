@@ -7,7 +7,7 @@ export default function Club({ club }) {
     return (
         <Layout>
             <Head>
-                <meta property="og:image" content={'https://drive.google.com/uc?export=view&id=' + club.main_image + '&usp=sharing'}/>
+                <meta property="og:image" content={'https://drive.google.com/uc?export=view&id=' + club.logo + '&usp=sharing'}/>
             </Head>
             <div className={"shutter"}></div>
             <div className={"relative eyecatch p-20"}>

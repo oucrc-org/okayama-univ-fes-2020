@@ -7,7 +7,7 @@ export default function Club({club}) {
     return (
         <Layout>
             <Head>
-                <meta property="og:image" content={'https://drive.google.com/uc?export=view&id=' + club.main_image + '&usp=sharing'}/>
+                <meta property="og:image" content={'https://drive.google.com/uc?export=view&id=' + club.logo + '&usp=sharing'}/>
             </Head>
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">
