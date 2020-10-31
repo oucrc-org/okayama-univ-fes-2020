@@ -55,7 +55,7 @@ export async function getServerSideProps() {
     return {
         props: {
             fixedContents: getFixedContents(),
-            project: (await getClubs()).find((it) => Number(it.id) === 6),
+            project: (await getClubs()).find((it) => Number(it.project_id) === getPickUpProjectId()),
         }
     }
 }
