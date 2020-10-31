@@ -18,8 +18,9 @@ export default class MyDocument extends Document {
                         `,
                     }}
                 />
-                <meta property="og:image" content="/public/committee.jpg" />
+                <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/public/image/committee.jpg"/>
                 <meta property="og:site_name" content="岡山大学大学祭2020" />
+                <meta name="twitter:card" content="Summary Card" />
             </Head>
             <body>
             <Main/>
