@@ -16,6 +16,7 @@ export default function Index({fixedContents, project}) {
             <Layout>
                 <Head>
                     <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
+                    <meta property="og:description" content="岡山大学大学祭のホームページです" />
                 </Head>
                 <MainVisual/>
                 <div className="max-w-6xl container ml-auto mr-auto">

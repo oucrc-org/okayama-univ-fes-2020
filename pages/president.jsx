@@ -7,6 +7,7 @@ export default function President() {
         <Layout>
             <Head>
                 <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
+                <meta property="og:description" content="岡山大学大学祭のホームページです" />
             </Head>
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">

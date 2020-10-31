@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
                     }}
                 />
                 <meta property="og:site_name" content="岡山大学大学祭2020" />
-                <meta property="og:description" content="岡山大学大学祭のホームページです" />
                 <meta name="twitter:title" content="岡山大学大学祭2020" />
                 <meta name="twitter:card" content="summary" />
             </Head>

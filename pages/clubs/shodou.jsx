@@ -9,6 +9,7 @@ export default function Club({club}) {
         <Layout>
             <Head>
                 <meta property="og:image" content={'https://drive.google.com/uc?export=view&id=' + club.logo + '&usp=sharing'}/>
+                <meta property="og:description" content={club.title + " の紹介ページ"} />
             </Head>
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">
