@@ -68,7 +68,7 @@ export default function Projects({projects}) {
 }
 
 export async function getStaticProps() {
-    const projects = (await getClubs()).filter((club) => club.project_type === 'project');
+    const projects = (await getClubs()).filter((club) => club.project_type === 'project').reverse();
 
     return {
         props: {
