@@ -45,12 +45,12 @@ export default function Club({club}) {
                     <ul className="mx-3">
                         {artList.map((artList) =>
                             <li key={artList.number} className="flex flex-wrap mb-12">
-                                <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
-                                     className="w-full md:w-2/3 mb-5"
-                                     style={{border: '10px ridge #FFFFE0'}}
-                                     alt="表示に失敗しました"
-                                     onContextMenu={(e) => e.preventDefault()}/>
-
+                                <div className="w-full md:w-2/3 mb-5 ">
+                                    <img src={"/okadaiart/okadaiart_" + artList.number + ".jpg"}
+                                         style={{border: '10px ridge #FFFFE0'}}
+                                         alt="表示に失敗しました"
+                                         onContextMenu={(e) => e.preventDefault()}/>
+                                </div>
                                 {artList.number !== "25-1" &&
                                 <div className="w-full md:w-1/3 mt-auto mb-5">
                                     <div className='p-6 border border-black font-medium mx-5'>
