@@ -151,12 +151,11 @@ export default function Club({ club }) {
                                 className={"text-green-600 bg-white"}>期間：</span>10日
                             </li>
 
-                            <li className={"py-2"}><span className={"text-green-600 bg-white"}>大変だったこと：</span>水冷じゃないと放熱が間に合わないこと
+                            <li className={"py-2"}><span className={"text-green-600 bg-white"}>大変だったこと：</span>部品の配置。これでも出来るだけ小型化した
                             </li>
-                            <li className={"py-2"}><span className={"text-green-600 bg-white"}>うれしかったこと：</span>教授受けが良かった
-                            </li>
-                            <li className={"py-2"}><span className={"text-green-600 bg-white"}>感想：</span>水冷式でマイナス15度まで冷却できる
-                                水を垂らすと数秒で凍るほど 動作時には空気中の水分が霜になって顕現する
+                            <li className={"py-2"}><span className={"text-green-600 bg-white"}>感想：</span>間欠点灯機能いらんかったな
+                                あともうちょっとパワー上げたらよかったかも
+                                夜道は相変わらず暗いままです
                             </li>
                         </ul>
                     </div>
