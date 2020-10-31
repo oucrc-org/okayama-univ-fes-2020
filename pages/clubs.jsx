@@ -3,10 +3,14 @@ import {getCategories, getClubs} from "../lib/clubs";
 import Link from "next/link";
 import Club from "../components/Club";
 import Heading from "../components/common/Heading";
+import Head from "next/dist/next-server/lib/head";
 
 export default function Clubs({clubs, customs, categories}) {
     return (
         <Layout>
+            <Head>
+                <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
+            </Head>
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-6xl">
                     <div className="relative mb-6">

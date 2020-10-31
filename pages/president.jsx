@@ -1,9 +1,13 @@
 import Layout from "../components/Layout";
 import changeToUrl from "../lib/regex";
+import Head from "next/dist/next-server/lib/head";
 
 export default function President() {
     return (
         <Layout>
+            <Head>
+                <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
+            </Head>
             <div className="w-full">
                 <div className="ml-auto mr-auto max-w-3xl">
                     <div className="relative mb-6">

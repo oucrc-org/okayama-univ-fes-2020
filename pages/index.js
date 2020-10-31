@@ -8,11 +8,15 @@ import Link from "next/link";
 import Project from "../components/Project";
 import {getClubs} from "../lib/clubs";
 import getPickUpProjectId, {getPickUpProject} from "../lib/pickup";
+import Head from "next/dist/next-server/lib/head";
 
 export default function Index({fixedContents, project}) {
     return (
         <div>
             <Layout>
+                <Head>
+                    <meta property="og:image" content="https://okayama-univ-fes-git-master.oucrc.vercel.app/committee.jpg"/>
+                </Head>
                 <MainVisual/>
                 <div className="max-w-6xl container ml-auto mr-auto">
                     <Message/>
