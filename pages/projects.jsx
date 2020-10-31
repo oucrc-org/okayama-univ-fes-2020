@@ -32,6 +32,8 @@ export default function Projects({projects}) {
                                 </li>
                         ))}
                     </ul>
+                    <p className="mx-6">アンケートで評価の高かった団体を表彰しますので、企画が良かったと思う団体への応援を込めて、以下のご協力をお願いいたします。</p>
+                    <p className="mx-6 mb-5"><Link href={"//forms.gle/F5a2HRD5XSzr3nDs8"}><a className="text-blue-600">アンケートページ</a></Link></p>
                     <p className="text-red-600 mx-6">※本学の公認団体については、活動前後の継続的な検温や、アルコール消毒、定期的な換気等、感染症対策を講じた上で活動を行っております。また、動画や写真にはコロナ禍以前に活動していた時のものを含みます</p>
                     <div className="p-6">
                         {
