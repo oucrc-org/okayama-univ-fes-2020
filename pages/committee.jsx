@@ -37,7 +37,7 @@ export default function Committee() {
 
                         <h2 className="text-green-600 text-xl font-bold mb-3 font-serif">紹介動画</h2>
                         <iframe className="mb-6" width="100%" height="360px"
-                                src={'https://www.youtube.com/embed/Xwzya7frcIw'}
+                                src={'https://www.youtube.com/embed/0THV2U_vH9w'}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen/>
